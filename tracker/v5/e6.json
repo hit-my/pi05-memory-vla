@@ -1,0 +1,16 @@
+{
+ "base": {"cfg": {}},
+ "nd": {"cfg": {"dup_frac": 0.0}},
+ "tc": {"cfg": {"held_px": 0.0, "held_edge_px": 6.0}},
+ "tc10": {"cfg": {"held_px": 0.0, "held_edge_px": 10.0}},
+ "tc_nd": {"cfg": {"held_px": 0.0, "held_edge_px": 6.0, "dup_frac": 0.0}},
+ "n18": {"cfg": {"near_px": 18.0}},
+ "n18_nd": {"cfg": {"near_px": 18.0, "dup_frac": 0.0}},
+ "15a": {"cfg": {"dup_frac": 0.0, "push": false, "near_px": 18.0, "held_px": 0.0, "held_edge_px": 6.0}, "tasks": [15, 16, 9]},
+ "15b": {"cfg": {"dup_frac": 0.0, "push": false, "near_px": 18.0, "held_px": 0.0, "held_edge_px": 6.0, "rel_px": 45.0}, "tasks": [15, 16, 9]},
+ "15c": {"cfg": {"dup_frac": 0.0, "push": false, "near_px": 18.0, "held_px": 0.0, "held_edge_px": 6.0, "rel_follow": false}, "tasks": [15, 16, 9]},
+ "15d": {"cfg": {"dup_frac": 0.0, "push": false, "near_px": 25.0, "held_px": 0.0, "held_edge_px": 10.0, "rel_px": 45.0}, "tasks": [15, 16, 9]},
+ "12a": {"cfg": {"dup_frac": 0.0}, "retire": {"drawer": "close_move20"}, "tasks": [12, 13, 17]},
+ "12b": {"cfg": {"dup_frac": 0.0, "held_px": 0.0, "held_edge_px": 6.0}, "retire": {"drawer": "close_move20"}, "tasks": [12, 13, 17]},
+ "12c": {"cfg": {"dup_frac": 0.0, "near_px": 18.0}, "retire": {"drawer": "close_move20"}, "tasks": [12, 13, 17]}
+}

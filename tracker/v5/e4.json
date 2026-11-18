@@ -1,0 +1,5 @@
+{
+ "ng": {"cfg": {"grow": false}},
+ "ngnp": {"cfg": {"grow": false, "push": false}},
+ "ng+po": {"cfg": {"grow": false}, "retire": {"microwave": "place_open"}}
+}

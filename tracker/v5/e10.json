@@ -1,0 +1,9 @@
+{
+ "raw": {"cfg": {"mode": "raw"}},
+ "col45": {"cfg": {"mode": "raw", "raw_colour_tol": 45.0}},
+ "af25": {"cfg": {"mode": "raw", "raw_area_frac": 0.25}},
+ "af35": {"cfg": {"mode": "raw", "raw_area_frac": 0.35}},
+ "af50": {"cfg": {"mode": "raw", "raw_area_frac": 0.5}},
+ "af35col45": {"cfg": {"mode": "raw", "raw_area_frac": 0.35, "raw_colour_tol": 45.0}},
+ "af50col45": {"cfg": {"mode": "raw", "raw_area_frac": 0.5, "raw_colour_tol": 45.0}}
+}

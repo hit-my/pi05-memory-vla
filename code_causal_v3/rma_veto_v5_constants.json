@@ -1,0 +1,1223 @@
+{
+ "version": "v5",
+ "note": "per-task rule sets chosen on the selection half (even positions of the sorted episode list) against simulator GT; cfg overrides tv_fuse_v5.CONFIG5; retire = checklist triggers per container (tv_fuse_v5.retirement_plan_v5)",
+ "common": {
+  "mode": "v5",
+  "min_area": 20,
+  "blob": "",
+  "raw_colour_tol": 0.0,
+  "near_px": 12.0,
+  "start_settle": 15,
+  "grab_edge_px": 4.0,
+  "grab_anchor_px": 14.0,
+  "grab_win": 12,
+  "settle": 12,
+  "min_width": 0.014,
+  "lift_px": 8.0,
+  "conf_n": 3,
+  "held_px": 45.0,
+  "held_edge_px": 25.0,
+  "behind_px": 25.0,
+  "behind_n": 5,
+  "rel_px": 30.0,
+  "stable_n": 10,
+  "stable_px": 3.0,
+  "lock_far_px": 20.0,
+  "push": true,
+  "push_tol": 0.5,
+  "push_abs": 5.0,
+  "dup_frac": 0.5,
+  "hold_rest": "",
+  "hold_rel": false,
+  "hold_dup": false,
+  "area_abs": 1200,
+  "area_ratio": 3.0,
+  "area_floor": 200,
+  "area_ref_n": 30
+ },
+ "tasks": {
+  "1": {
+   "chosen": "raw|A",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {
+    "drawer": "close_end",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.159,
+   "selection_half_raw_err100": 5.35,
+   "objects": [
+    "cookies",
+    "sauce"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     139,
+     132
+    ],
+    [
+     119,
+     136
+    ]
+   ]
+  },
+  "2": {
+   "chosen": "v5|A",
+   "cfg": {},
+   "retire": {
+    "drawer": "close_end",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.112,
+   "selection_half_raw_err100": 6.493,
+   "objects": [
+    "butter",
+    "popcorn"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     125,
+     145
+    ],
+    [
+     96,
+     144
+    ]
+   ]
+  },
+  "3": {
+   "chosen": "v5|none",
+   "cfg": {},
+   "retire": {},
+   "selection_half_err100": 0.051,
+   "selection_half_raw_err100": 2.942,
+   "objects": [
+    "cream",
+    "chocolate"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     125,
+     145
+    ],
+    [
+     96,
+     144
+    ]
+   ]
+  },
+  "4": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.028,
+   "selection_half_raw_err100": 0.028,
+   "objects": [
+    "butter"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     99,
+     161
+    ]
+   ]
+  },
+  "5": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.022,
+   "selection_half_raw_err100": 0.022,
+   "objects": [
+    "butter"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     99,
+     161
+    ]
+   ]
+  },
+  "6": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.28,
+   "selection_half_raw_err100": 0.28,
+   "objects": [
+    "sauce"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     122,
+     132
+    ]
+   ]
+  },
+  "7": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.395,
+   "selection_half_raw_err100": 0.395,
+   "objects": [
+    "sauce"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     127,
+     142
+    ]
+   ]
+  },
+  "8": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.248,
+   "selection_half_raw_err100": 0.248,
+   "objects": [
+    "chocolate",
+    "sauce"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     106,
+     128
+    ],
+    [
+     103,
+     152
+    ]
+   ]
+  },
+  "9": {
+   "chosen": "v5_nodup_nopush|none",
+   "cfg": {
+    "dup_frac": 0.0,
+    "push": false
+   },
+   "retire": {},
+   "selection_half_err100": 0.19,
+   "selection_half_raw_err100": 0.271,
+   "objects": [
+    "butter",
+    "sauce"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     99,
+     160
+    ],
+    [
+     103,
+     120
+    ]
+   ]
+  },
+  "10": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.0,
+   "selection_half_raw_err100": 0.0,
+   "objects": [
+    "bottle"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     158,
+     119
+    ]
+   ]
+  },
+  "11": {
+   "chosen": "v5|none",
+   "cfg": {},
+   "retire": {},
+   "selection_half_err100": 0.429,
+   "selection_half_raw_err100": 3.655,
+   "objects": [
+    "cookies",
+    "butter"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     79,
+     177
+    ],
+    [
+     99,
+     161
+    ]
+   ]
+  },
+  "12": {
+   "chosen": "v5_nodup_holdpre|B",
+   "cfg": {
+    "dup_frac": 0.0,
+    "hold_rest": "pre"
+   },
+   "retire": {
+    "drawer": "close_move20",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.391,
+   "selection_half_raw_err100": 4.151,
+   "objects": [
+    "cookies",
+    "chocolate"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     79,
+     177
+    ],
+    [
+     87,
+     119
+    ]
+   ]
+  },
+  "13": {
+   "chosen": "raw|B",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {
+    "drawer": "close_move20",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.011,
+   "selection_half_raw_err100": 0.11,
+   "objects": [
+    "cookies",
+    "butter"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     79,
+     177
+    ],
+    [
+     99,
+     161
+    ]
+   ]
+  },
+  "14": {
+   "chosen": "v5_holdpre|A",
+   "cfg": {
+    "hold_rest": "pre"
+   },
+   "retire": {
+    "drawer": "close_end",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.249,
+   "selection_half_raw_err100": 11.586,
+   "objects": [
+    "cookies",
+    "chocolate"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     79,
+     177
+    ],
+    [
+     87,
+     119
+    ]
+   ]
+  },
+  "15": {
+   "chosen": "raw_col45|none",
+   "cfg": {
+    "mode": "raw",
+    "raw_colour_tol": 45.0
+   },
+   "retire": {},
+   "selection_half_err100": 1.341,
+   "selection_half_raw_err100": 1.454,
+   "objects": [
+    "butter",
+    "milk"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     99,
+     161
+    ],
+    [
+     105,
+     129
+    ]
+   ]
+  },
+  "16": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.0,
+   "selection_half_raw_err100": 0.0,
+   "objects": [
+    "milk"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     105,
+     126
+    ]
+   ]
+  },
+  "17": {
+   "chosen": "v5|none",
+   "cfg": {},
+   "retire": {},
+   "selection_half_err100": 0.332,
+   "selection_half_raw_err100": 2.49,
+   "objects": [
+    "butter",
+    "chocolate"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     99,
+     161
+    ],
+    [
+     87,
+     119
+    ]
+   ]
+  },
+  "18": {
+   "chosen": "raw_min8|none",
+   "cfg": {
+    "mode": "raw",
+    "min_area": 8
+   },
+   "retire": {},
+   "selection_half_err100": 0.287,
+   "selection_half_raw_err100": 0.336,
+   "objects": [
+    "chocolate",
+    "butter"
+   ],
+   "first_frame": "appearance (frame-0 selection v5: zoomed SAM3 detections + appearance classifier, see first_frame_appearance)",
+   "clicks": [
+    [
+     108,
+     107
+    ],
+    [
+     104,
+     112
+    ]
+   ]
+  },
+  "19": {
+   "chosen": "v5_holddup_bigarea|none",
+   "cfg": {
+    "hold_dup": true,
+    "area_floor": 500
+   },
+   "retire": {},
+   "selection_half_err100": 0.767,
+   "selection_half_raw_err100": 7.936,
+   "objects": [
+    "sauce",
+    "milk",
+    "juice"
+   ],
+   "first_frame": "appearance (frame-0 selection v5: zoomed SAM3 detections + appearance classifier, see first_frame_appearance)",
+   "clicks": [
+    [
+     94,
+     104
+    ],
+    [
+     101,
+     104
+    ],
+    [
+     97,
+     110
+    ]
+   ]
+  },
+  "20": {
+   "chosen": "raw|A",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {
+    "drawer": "close_end",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.598,
+   "selection_half_raw_err100": 31.346,
+   "objects": [
+    "cookies",
+    "chocolate"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     114,
+     169
+    ],
+    [
+     99,
+     164
+    ]
+   ]
+  },
+  "21": {
+   "chosen": "raw|A",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {
+    "drawer": "close_end",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 1.071,
+   "selection_half_raw_err100": 31.443,
+   "objects": [
+    "butter",
+    "chocolate"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     114,
+     169
+    ],
+    [
+     99,
+     164
+    ]
+   ]
+  },
+  "22": {
+   "chosen": "v5_nodup_hold|C",
+   "cfg": {
+    "dup_frac": 0.0,
+    "hold_rel": true
+   },
+   "retire": {
+    "microwave": "close_end"
+   },
+   "selection_half_err100": 0.121,
+   "selection_half_raw_err100": 2.088,
+   "objects": [
+    "sauce",
+    "cookies"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     98,
+     137
+    ],
+    [
+     100,
+     169
+    ]
+   ]
+  },
+  "23": {
+   "chosen": "raw|A",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {
+    "drawer": "close_end",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.0,
+   "selection_half_raw_err100": 32.962,
+   "objects": [
+    "cream",
+    "popcorn"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     114,
+     169
+    ],
+    [
+     99,
+     169
+    ]
+   ]
+  },
+  "24": {
+   "chosen": "raw|A",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {
+    "drawer": "close_end",
+    "microwave": "place_open",
+    "basket": "place_end"
+   },
+   "selection_half_err100": 0.0,
+   "selection_half_raw_err100": 30.951,
+   "objects": [
+    "cookies",
+    "popcorn"
+   ],
+   "first_frame": "B (SAM3 generic detection nearest to the fixed click, initB)",
+   "clicks": [
+    [
+     114,
+     169
+    ],
+    [
+     99,
+     169
+    ]
+   ]
+  },
+  "25": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.011,
+   "selection_half_raw_err100": 0.011,
+   "objects": [
+    "butter",
+    "cream"
+   ],
+   "first_frame": "B2 (box-like detection nearest to the fixed click, v4/initB2.py)",
+   "clicks": [
+    [
+     95,
+     168
+    ],
+    [
+     105,
+     167
+    ]
+   ]
+  },
+  "26": {
+   "chosen": "raw|none",
+   "cfg": {
+    "mode": "raw"
+   },
+   "retire": {},
+   "selection_half_err100": 0.264,
+   "selection_half_raw_err100": 0.264,
+   "objects": [
+    "chocolate",
+    "cream"
+   ],
+   "first_frame": "B2 (box-like detection nearest to the fixed click, v4/initB2.py)",
+   "clicks": [
+    [
+     95,
+     165
+    ],
+    [
+     104,
+     167
+    ]
+   ]
+  }
+ },
+ "first_frame_appearance": {
+  "18": {
+   "reference_implementation": "/data/lgd/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
+   "t0": 2,
+   "second_look_frame": 6,
+   "crop_xyxy": [
+    56,
+    66,
+    152,
+    162
+   ],
+   "crop_zoom_to": 1008,
+   "prompts": [
+    "box",
+    "bottle",
+    "carton",
+    "small object",
+    "food package",
+    "chocolate box",
+    "butter",
+    "milk carton",
+    "juice carton",
+    "ketchup bottle",
+    "chocolate bar",
+    "brown box",
+    "dark box"
+   ],
+   "detector_threshold": 0.15,
+   "area_range": [
+    20,
+    700
+   ],
+   "nms_iou": 0.7,
+   "selection": {
+    "p_min": 0.5,
+    "pair_distance_max_px": 17.0,
+    "pair_penalty_per_px": 0.25,
+    "usual_area_px": [
+     99.0,
+     63.0
+    ],
+    "area_exponent": 0.5,
+    "no_overlap": 0.3,
+    "note": "ff_lib.select_joint: maximise sum log P + area_exponent*log(min(1, area/usual_area)) - pair_penalty*max(0, distance - pair_distance_max); image positions are not used"
+   },
+   "late": {
+    "every": 10,
+    "p_min": 0.7,
+    "min_area_ratio": 0.4,
+    "not_within_px_of_gripper": 15,
+    "no_overlap": 0.3,
+    "lost_after_frames": 10,
+    "lost_within_px_of_last_seen": 15,
+    "first_within_px_of_another_objects_selection": 25.0,
+    "note": "objects without a track are looked for next to where another object was selected; objects whose mask had < 20 px for lost_after_frames frames are looked for where the mask was last seen"
+   },
+   "grasp_check": {
+    "wait_frames": 15,
+    "gripper_moved_px": 18,
+    "mask_farther_than_px_from_gripper": 12,
+    "detection_within_px_of_gripper": 6,
+    "p_min": 0.02,
+    "p_min_if_mask_empty": 0.5,
+    "crop": "96 px square centred on the gripper pixel",
+    "note": "uses the checklist item 'pick up the <object>': when the closed gripper has moved away and the object's mask is not at the gripper (or the object has no track), it is re-started from the detection at the gripper; a track of another object that sat on it is dropped"
+   },
+   "classes": [
+    "chocolate",
+    "butter",
+    "other"
+   ],
+   "features": "ff_lib.feat (24-d): mean RGB(3), std RGB(3), hue histogram weighted by saturation(8), saturation hist(3), value hist(3), area/200, w/20, h/20, fill",
+   "classifier": {
+    "classes": [
+     0,
+     1,
+     2
+    ],
+    "mu": [
+     0.2993904948234558,
+     0.2539292871952057,
+     0.2298896759748459,
+     0.07262074947357178,
+     0.07183483988046646,
+     0.07484206557273865,
+     0.2637314796447754,
+     0.009490150958299637,
+     0.0010608677985146642,
+     0.00031918936292640865,
+     0.0008303731447085738,
+     0.002323307329788804,
+     0.0026509533636271954,
+     0.011585347354412079,
+     0.6434706449508667,
+     0.2341185212135315,
+     0.12241104990243912,
+     0.6771349310874939,
+     0.31149202585220337,
+     0.011373045854270458,
+     0.45031461119651794,
+     0.3480570614337921,
+     0.8415848016738892,
+     0.7825407981872559
+    ],
+    "sd": [
+     0.10749796777963638,
+     0.12332513183355331,
+     0.1329430192708969,
+     0.02772967889904976,
+     0.027469724416732788,
+     0.028765685856342316,
+     0.21530196070671082,
+     0.022514764219522476,
+     0.005912343505769968,
+     0.0027836370281875134,
+     0.0036414144560694695,
+     0.009779784828424454,
+     0.011519322171807289,
+     0.023761535063385963,
+     0.3598428964614868,
+     0.2520963251590729,
+     0.1812220811843872,
+     0.3095308244228363,
+     0.29016926884651184,
+     0.042518019676208496,
+     0.5166467428207397,
+     0.2844875156879425,
+     0.5972549319267273,
+     0.1233176440000534
+    ],
+    "W": [
+     [
+      -0.8122287127324577,
+      0.40335683495157887,
+      0.40887187778088196
+     ],
+     [
+      -0.014390738913156514,
+      -1.2832492559645223,
+      1.2976399948776811
+     ],
+     [
+      1.2931190670545163,
+      -1.1088581137435713,
+      -0.18426095331093922
+     ],
+     [
+      -0.5068419746620632,
+      -0.2708548896864564,
+      0.7776968643485194
+     ],
+     [
+      1.817669852595243,
+      -0.353084029956962,
+      -1.464585822638279
+     ],
+     [
+      -1.1221579190712527,
+      1.4665037695076342,
+      -0.34434585043639127
+     ],
+     [
+      1.6863405436747638,
+      0.5444821339207672,
+      -2.230822677595523
+     ],
+     [
+      -0.36316209404850003,
+      -0.05790971093030891,
+      0.4210718049788107
+     ],
+     [
+      -0.8497747089173269,
+      0.2118734579668862,
+      0.6379012509504428
+     ],
+     [
+      -0.5139177300032336,
+      0.06917771569477102,
+      0.4447400143084641
+     ],
+     [
+      0.13692458128495802,
+      0.05786129431085232,
+      -0.19478587559581015
+     ],
+     [
+      -0.23409772782185148,
+      0.37353067521386696,
+      -0.13943294739201603
+     ],
+     [
+      -0.03262062361561574,
+      0.21771193071389233,
+      -0.1850913070982764
+     ],
+     [
+      0.07486412269925964,
+      0.3183596567887836,
+      -0.39322377948804277
+     ],
+     [
+      0.734897674463189,
+      -0.7251350807029658,
+      -0.009762593760224918
+     ],
+     [
+      0.4745104309863988,
+      0.21158428046957034,
+      -0.6860947114559699
+     ],
+     [
+      -2.11933318499104,
+      1.145531388824288,
+      0.9738017961667587
+     ],
+     [
+      1.2722203205484315,
+      -1.7796404523419862,
+      0.5074201317935593
+     ],
+     [
+      -1.3338587507913764,
+      1.9258018985228038,
+      -0.5919431477314241
+     ],
+     [
+      -0.15867195008917132,
+      -0.18709947365170726,
+      0.34577142374087766
+     ],
+     [
+      0.3411511025617583,
+      -0.6323368053333358,
+      0.2911857027715759
+     ],
+     [
+      0.43019009077875325,
+      -0.5711179180906472,
+      0.1409278273118947
+     ],
+     [
+      -0.5507590082653576,
+      -1.4362578375159978,
+      1.9870168457813553
+     ],
+     [
+      0.24670559016288895,
+      0.12636710462345113,
+      -0.3730726947863417
+     ]
+    ],
+    "b": [
+     -0.6669733718404857,
+     -3.7215524260045405,
+     4.388525797845031
+    ]
+   },
+   "trained_on": "selection half; zoomed detections of frames 4, 6, 10 (task 18) / 10 (task 19) labelled with the GT boxes of the same frame"
+  },
+  "19": {
+   "reference_implementation": "/data/lgd/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
+   "t0": 10,
+   "second_look_frame": null,
+   "crop_xyxy": [
+    56,
+    66,
+    152,
+    162
+   ],
+   "crop_zoom_to": 1008,
+   "prompts": [
+    "box",
+    "bottle",
+    "carton",
+    "small object",
+    "food package",
+    "chocolate box",
+    "butter",
+    "milk carton",
+    "juice carton",
+    "ketchup bottle",
+    "chocolate bar",
+    "brown box",
+    "dark box"
+   ],
+   "detector_threshold": 0.15,
+   "area_range": [
+    20,
+    700
+   ],
+   "nms_iou": 0.7,
+   "selection": {
+    "p_min": 0.5,
+    "pair_distance_max_px": 18.0,
+    "pair_penalty_per_px": 0.25,
+    "usual_area_px": [
+     186.0,
+     111.0,
+     134.0
+    ],
+    "area_exponent": 0.5,
+    "no_overlap": 0.3,
+    "note": "ff_lib.select_joint: maximise sum log P + area_exponent*log(min(1, area/usual_area)) - pair_penalty*max(0, distance - pair_distance_max); image positions are not used"
+   },
+   "late": {
+    "every": 10,
+    "p_min": 0.7,
+    "min_area_ratio": 0.4,
+    "not_within_px_of_gripper": 15,
+    "no_overlap": 0.3,
+    "lost_after_frames": 10,
+    "lost_within_px_of_last_seen": 15,
+    "first_within_px_of_another_objects_selection": 26.0,
+    "note": "objects without a track are looked for next to where another object was selected; objects whose mask had < 20 px for lost_after_frames frames are looked for where the mask was last seen"
+   },
+   "grasp_check": {
+    "wait_frames": 15,
+    "gripper_moved_px": 18,
+    "mask_farther_than_px_from_gripper": 12,
+    "detection_within_px_of_gripper": 6,
+    "p_min": 0.02,
+    "p_min_if_mask_empty": 0.5,
+    "crop": "96 px square centred on the gripper pixel",
+    "note": "uses the checklist item 'pick up the <object>': when the closed gripper has moved away and the object's mask is not at the gripper (or the object has no track), it is re-started from the detection at the gripper; a track of another object that sat on it is dropped"
+   },
+   "classes": [
+    "sauce",
+    "milk",
+    "juice",
+    "other"
+   ],
+   "features": "ff_lib.feat (24-d): mean RGB(3), std RGB(3), hue histogram weighted by saturation(8), saturation hist(3), value hist(3), area/200, w/20, h/20, fill",
+   "classifier": {
+    "classes": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "mu": [
+     0.32743096351623535,
+     0.27418071031570435,
+     0.23189571499824524,
+     0.07960662990808487,
+     0.07471451163291931,
+     0.07548271864652634,
+     0.2618708908557892,
+     0.04990626499056816,
+     0.01989796571433544,
+     0.0016643531853333116,
+     0.004018394276499748,
+     0.004760549403727055,
+     0.0023824393283575773,
+     0.007321274373680353,
+     0.5504419207572937,
+     0.2438478022813797,
+     0.20571039617061615,
+     0.5855284929275513,
+     0.4010542631149292,
+     0.01341727189719677,
+     0.4704773724079132,
+     0.41794273257255554,
+     0.6800401210784912,
+     0.7932201623916626
+    ],
+    "sd": [
+     0.12387017160654068,
+     0.126423180103302,
+     0.147988960146904,
+     0.035752199590206146,
+     0.03380253165960312,
+     0.0328315906226635,
+     0.2416132390499115,
+     0.08249285817146301,
+     0.06402508914470673,
+     0.011694424785673618,
+     0.01153922826051712,
+     0.011502731591463089,
+     0.009313412941992283,
+     0.016327159479260445,
+     0.4238358736038208,
+     0.25507622957229614,
+     0.25238826870918274,
+     0.36174559593200684,
+     0.3449915647506714,
+     0.034404855221509933,
+     0.511511504650116,
+     0.2495514303445816,
+     0.5066449046134949,
+     0.12648898363113403
+    ],
+    "W": [
+     [
+      -1.2064451440636246,
+      1.15969869053922,
+      0.14561210803413185,
+      -0.09886565450972458
+     ],
+     [
+      -1.0148487435211437,
+      -1.2486722641049268,
+      1.9347289915770944,
+      0.3287920160489813
+     ],
+     [
+      0.3835813372395382,
+      0.4654123463837403,
+      -2.907292361651892,
+      2.058298678028618
+     ],
+     [
+      0.5634381850280044,
+      0.16114996432009518,
+      0.1664159722172966,
+      -0.8910041215653955
+     ],
+     [
+      0.5403862962949172,
+      -0.09366325354341935,
+      -0.38734119580899967,
+      -0.05938184694249911
+     ],
+     [
+      0.3592023200723186,
+      0.10042143715116346,
+      0.33446197972722147,
+      -0.7940857369507046
+     ],
+     [
+      0.43706593329225074,
+      0.057263725076175304,
+      0.48606133488717596,
+      -0.9803909932555982
+     ],
+     [
+      0.19419712443135437,
+      -1.6928534324458648,
+      1.3788473496947375,
+      0.11980895831977914
+     ],
+     [
+      0.9512513843611149,
+      -0.4391901442681892,
+      -1.17914695520232,
+      0.6670857151093966
+     ],
+     [
+      0.19796619329136553,
+      -0.28565877185414074,
+      -0.02287220759319985,
+      0.11056478615597466
+     ],
+     [
+      0.40965603069215983,
+      0.3286098261010634,
+      -0.36042010438864047,
+      -0.37784575240458373
+     ],
+     [
+      0.36473650560976173,
+      0.4516259455009606,
+      -0.38160546960074154,
+      -0.4347569815099816
+     ],
+     [
+      0.3483716547350957,
+      -0.3572088561720614,
+      -0.25981636104771216,
+      0.26865356248467726
+     ],
+     [
+      0.02090381650348538,
+      0.33519110933921237,
+      -0.5241910151015424,
+      0.16809608925884512
+     ],
+     [
+      -0.12168171329160228,
+      -0.13322148255591937,
+      0.3848117063728315,
+      -0.12990851052530972
+     ],
+     [
+      -0.41806768236238595,
+      1.9932404319861983,
+      -0.7928486169513059,
+      -0.7823241326725002
+     ],
+     [
+      0.6268607445274594,
+      -1.7907493316073337,
+      0.15507735326981628,
+      1.0088112338100645
+     ],
+     [
+      2.1173456094529066,
+      -0.909280356632693,
+      -0.6007743338849655,
+      -0.6072909189352553
+     ],
+     [
+      -2.2434527655498733,
+      0.9587972428934487,
+      0.7617921758331346,
+      0.522863346823291
+     ],
+     [
+      0.23345543850325823,
+      -0.05373486023488224,
+      -1.322032862985448,
+      1.1423122847170732
+     ],
+     [
+      0.3448445701505653,
+      -0.8667046697374943,
+      -1.0482442439792292,
+      1.5701043435661564
+     ],
+     [
+      2.7893066683109766,
+      -0.70229926662958,
+      0.880134852212768,
+      -2.9671422538941474
+     ],
+     [
+      0.26800796003321137,
+      -0.2953076744695473,
+      -0.2562484219726893,
+      0.2835481364090248
+     ],
+     [
+      0.04923913229518861,
+      0.3292127178931574,
+      0.21056718211108852,
+      -0.5890190322994331
+     ]
+    ],
+    "b": [
+     -3.1589796521491733,
+     -1.6993585604580645,
+     -0.0915539584800388,
+     4.949892171087274
+    ]
+   },
+   "trained_on": "selection half; zoomed detections of frames 4, 6, 10 (task 18) / 10 (task 19) labelled with the GT boxes of the same frame"
+  }
+ }
+}

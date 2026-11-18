@@ -1,0 +1,11 @@
+{
+ "raw": {"cfg": {"mode": "raw"}},
+ "v5": {"cfg": {}},
+ "v5nogrow": {"cfg": {"grow": false}},
+ "v5nopush": {"cfg": {"push": false}},
+ "v5ng+r_ce": {"cfg": {"grow": false}, "retire": {"drawer": "close_end", "microwave": "place_end", "basket": "place_end"}, "tasks": [1,2,3,4,5,11,12,13,14,17,20,21,22,23,24]},
+ "v5ng+r_po": {"cfg": {"grow": false}, "retire": {"microwave": "place_open", "basket": "place_open"}, "tasks": [1,2,3,20,21,22,23,24]},
+ "v5ng+cap+r_ce": {"cfg": {"grow": false, "rel_cap": true}, "retire": {"drawer": "close_end", "microwave": "place_end", "basket": "place_end"}, "tasks": [1,2,3,11,12,13,14,17,20,21,22,23,24]},
+ "v5h+r_ce": {"cfg": {"hold_rel": true}, "retire": {"microwave": "close_end"}, "tasks": [22]},
+ "v5he+r_ce": {"cfg": {"hold_rel": true, "hold_pt": "e"}, "retire": {"microwave": "close_end"}, "tasks": [22]}
+}

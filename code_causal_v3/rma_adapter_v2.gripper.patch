@@ -1,0 +1,48 @@
+--- a/rma_adapter_v2.py	2026-11-12 23:35:10.641386895 +0800
++++ b/rma_adapter_v2.py	2026-11-12 23:35:10.641386895 +0800
+@@ -147,7 +147,7 @@
+         self.initial_memory = INITIAL_MEMORY
+         self.blank_latents = [[0.0] * LATENT_DIM for _ in range(MAX_ENTITIES)]
+         try:
+-            from rma_perception import Perception  # noqa: E402
++            from rma_perception_v2 import PerceptionV2 as Perception  # noqa: E402
+             self.perception_class = Perception
+         except ImportError:
+             self.perception_class = StubPerception
+@@ -201,6 +201,8 @@
+         self.stopped = None
+         self.calls = 0
+         self.frames = 0
++        self.plan = None  # the action chunk being executed by the runner, and the frame it was issued at
++        self.plan_frame = 0
+         self.log = []
+         self.gate = None
+ 
+@@ -219,13 +221,26 @@
+                 self.gate = self._ev.EvidenceGate(task, lambda s, t=task: self._spec.subtask_object(t, s),
+                                                   self.cameras[str(task)]["matrix"], self._mf, self._lv)
+         else:
+-            self.overlay = self.perception.step(rgb, state)
++            self.overlay = self.perception.step(rgb, state, last_gripper_cmd=self._last_gripper_cmd())
+         if self.gate is not None:
+             centres = getattr(self.perception, "centres", None) or []
+             self.gate.observe(state, list(centres))
+         self.frames += 1
+ 
++    def _last_gripper_cmd(self):
++        """Gripper command executed between the previous observed frame and this one (None = none yet = open).
++        The runner executes the latest chunk row by row, starting with row 0 right after infer_actions()."""
++        if self.plan is None:
++            return None
++        row = min(max(self.frames - 1 - self.plan_frame, 0), len(self.plan) - 1)
++        return float(self.plan[row][6])
++
+     def infer_actions(self, obs: dict[str, Any], prompt: str, resize_size: int) -> np.ndarray:
++        actions = self._infer_actions(obs, prompt, resize_size)
++        self.plan, self.plan_frame = np.asarray(actions, np.float32), self.frames - 1  # issued at the frame just observed
++        return actions
++
++    def _infer_actions(self, obs: dict[str, Any], prompt: str, resize_size: int) -> np.ndarray:
+         if self.overlay is None:  # runner without observe(): still keep the perception causal
+             self.observe(obs, prompt, resize_size)
+         if self.stopped:

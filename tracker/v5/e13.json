@@ -1,0 +1,5 @@
+{
+ "raw": {"cfg": {"mode": "raw"}},
+ "v5": {"cfg": {}},
+ "cover8": {"cfg": {"cover": true, "min_area": 8}}
+}

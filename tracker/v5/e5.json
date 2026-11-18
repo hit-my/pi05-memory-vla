@@ -1,0 +1,17 @@
+{
+ "base": {"cfg": {}},
+ "nodup": {"cfg": {"dup_frac": 0.0}},
+ "norelock": {"cfg": {"relock": false}},
+ "nopush": {"cfg": {"push": false}},
+ "restcap": {"cfg": {"rest_cap": true}},
+ "cma3": {"cfg": {"carry_min_area": 0.3}},
+ "cma5": {"cfg": {"carry_min_area": 0.5}},
+ "restcap+cma4+np": {"cfg": {"rest_cap": true, "carry_min_area": 0.4, "push": false}, "tasks": [15, 16, 9, 6, 7, 8, 10]},
+ "r_ce": {"cfg": {}, "retire": {"drawer": "close_end", "microwave": "place_open", "basket": "place_end"}, "tasks": [1,2,3,4,5,11,12,13,14,17,20,21,23,24]},
+ "r_m6": {"cfg": {}, "retire": {"drawer": "close_move6"}, "tasks": [4,5,11,12,13,14,17]},
+ "r_m12": {"cfg": {}, "retire": {"drawer": "close_move12"}, "tasks": [4,5,11,12,13,14,17]},
+ "r_m20": {"cfg": {}, "retire": {"drawer": "close_move20"}, "tasks": [4,5,11,12,13,14,17]},
+ "22he": {"cfg": {"hold_rel": true, "hold_pt": "e"}, "retire": {"microwave": "close_end"}, "tasks": [22]},
+ "22he_m6": {"cfg": {"hold_rel": true, "hold_pt": "e"}, "retire": {"microwave": "close_move6"}, "tasks": [22]},
+ "22he_m15": {"cfg": {"hold_rel": true, "hold_pt": "e"}, "retire": {"microwave": "close_move15"}, "tasks": [22]}
+}

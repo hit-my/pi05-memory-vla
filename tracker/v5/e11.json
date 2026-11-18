@@ -1,0 +1,12 @@
+{
+ "v5": {"cfg": {}},
+ "v5+A": {"cfg": {}, "retire": {"drawer": "close_end"}},
+ "v5+A_s20": {"cfg": {"retire_soft_tol": 20.0}, "retire": {"drawer": "close_end"}},
+ "v5+A_s30": {"cfg": {"retire_soft_tol": 30.0}, "retire": {"drawer": "close_end"}},
+ "v5+A_s45": {"cfg": {"retire_soft_tol": 45.0}, "retire": {"drawer": "close_end"}},
+ "v5+B_s30": {"cfg": {"retire_soft_tol": 30.0}, "retire": {"drawer": "close_move20"}},
+ "nd_hp+B": {"cfg": {"dup_frac": 0.0, "hold_rest": "pre"}, "retire": {"drawer": "close_move20"}},
+ "hp+B": {"cfg": {"hold_rest": "pre"}, "retire": {"drawer": "close_move20"}},
+ "nd_hp+B_s30": {"cfg": {"dup_frac": 0.0, "hold_rest": "pre", "retire_soft_tol": 30.0}, "retire": {"drawer": "close_move20"}},
+ "hp+B_s30": {"cfg": {"hold_rest": "pre", "retire_soft_tol": 30.0}, "retire": {"drawer": "close_move20"}}
+}

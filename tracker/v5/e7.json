@@ -1,0 +1,7 @@
+{
+ "raw": {"cfg": {"mode": "raw"}},
+ "t12": {"cfg": {"dup_frac": 0.0}, "retire": {"drawer": "close_move20"}},
+ "t14": {"cfg": {"dup_frac": 0.0}, "retire": {"drawer": "close_end"}},
+ "t22": {"cfg": {"dup_frac": 0.0, "hold_rel": true, "hold_pt": "e"}, "retire": {"microwave": "close_end"}},
+ "t11": {"cfg": {}}
+}

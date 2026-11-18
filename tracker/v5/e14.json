@@ -1,0 +1,4 @@
+{
+ "t18": {"cfg": {"mode": "raw", "min_area": 8}},
+ "t19": {"cfg": {"hold_dup": true, "area_floor": 500}}
+}

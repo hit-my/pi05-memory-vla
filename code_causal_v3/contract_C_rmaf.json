@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "project": "pi05_ledger_C_rma",
+  "local_root": "C:/Users/lenovo/output/pi05_ledger_abc/code",
+  "remote_root": "/pfs/pfs-7jnepv/lgd/pi05-abc/code",
+  "source": {
+    "repository": "libero-mem/LIBERO-Mem",
+    "revision": "6df130c05b82e09294fa9534e84a069687b72d33",
+    "base_url": "https://huggingface.co/datasets/libero-mem/LIBERO-Mem/resolve/6df130c05b82e09294fa9534e84a069687b72d33",
+    "metadata_cache": "/root/autodl-tmp/task8-annotations/data/official_metainfo.json",
+    "metadata_bytes": 713618260,
+    "metadata_advertised_sha256": "2afe9bc01f9579d4adeec63a6cf012f8560de3b5a4b7d5a96c0643c94777ad0c",
+    "tasks": [
+      {
+        "task_id": 1,
+        "name": "1_cookies_tomato_basket_dataset",
+        "filename": "1_cookies_tomato_basket_dataset",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 73804,
+        "required_goals": 4
+      },
+      {
+        "task_id": 2,
+        "name": "task2",
+        "filename": "task2",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 70693,
+        "required_goals": 4
+      },
+      {
+        "task_id": 3,
+        "name": "task3",
+        "filename": "task3",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 70261,
+        "required_goals": 4
+      },
+      {
+        "task_id": 4,
+        "name": "4_drawer_butter_dataset",
+        "filename": "4_drawer_butter_dataset",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 100838,
+        "required_goals": 9
+      },
+      {
+        "task_id": 5,
+        "name": "task5",
+        "filename": "task5",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 171385,
+        "required_goals": 9
+      },
+      {
+        "task_id": 6,
+        "name": "task6",
+        "filename": "task6",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 62593,
+        "required_goals": 4
+      },
+      {
+        "task_id": 7,
+        "name": "task7",
+        "filename": "task7",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 53920,
+        "required_goals": 4
+      },
+      {
+        "task_id": 8,
+        "name": "8_pick_chocolate_in_frypan_pour_tomato_sauce_twice_dataset",
+        "filename": "8_pick_chocolate_in_frypan_pour_tomato_sauce_twice_dataset",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 90946,
+        "required_goals": 6
+      },
+      {
+        "task_id": 9,
+        "name": "task9",
+        "filename": "task9",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 95522,
+        "required_goals": 6
+      },
+      {
+        "task_id": 10,
+        "name": "10_pour_wine_bottle_into_mug_dataset",
+        "filename": "10_pour_wine_bottle_into_mug_dataset",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 47144,
+        "required_goals": 4
+      },
+      {
+        "task_id": 11,
+        "name": "task11",
+        "filename": "task11",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 186234,
+        "required_goals": 8
+      },
+      {
+        "task_id": 12,
+        "name": "task12",
+        "filename": "task12",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 138181,
+        "required_goals": 6
+      },
+      {
+        "task_id": 13,
+        "name": "task13",
+        "filename": "task13",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 140411,
+        "required_goals": 6
+      },
+      {
+        "task_id": 14,
+        "name": "task14",
+        "filename": "task14",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 182641,
+        "required_goals": 8
+      },
+      {
+        "task_id": 15,
+        "name": "task15",
+        "filename": "task15",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 105901,
+        "required_goals": 6
+      },
+      {
+        "task_id": 16,
+        "name": "task16",
+        "filename": "task16",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 59429,
+        "required_goals": 4
+      },
+      {
+        "task_id": 17,
+        "name": "task17",
+        "filename": "task17",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 151664,
+        "required_goals": 6
+      },
+      {
+        "task_id": 18,
+        "name": "task18",
+        "filename": "task18",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 84811,
+        "required_goals": 4
+      },
+      {
+        "task_id": 19,
+        "name": "task19",
+        "filename": "task19",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 127688,
+        "required_goals": 6
+      },
+      {
+        "task_id": 20,
+        "name": "20_cookies_chocolate_microwave_dataset",
+        "filename": "20_cookies_chocolate_microwave_dataset",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 119500,
+        "required_goals": 6
+      },
+      {
+        "task_id": 21,
+        "name": "task21",
+        "filename": "task21",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 117500,
+        "required_goals": 6
+      },
+      {
+        "task_id": 22,
+        "name": "task22",
+        "filename": "task22",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 156500,
+        "required_goals": 8
+      },
+      {
+        "task_id": 23,
+        "name": "task23",
+        "filename": "task23",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 117500,
+        "required_goals": 6
+      },
+      {
+        "task_id": 24,
+        "name": "task24",
+        "filename": "task24",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 119500,
+        "required_goals": 6
+      },
+      {
+        "task_id": 25,
+        "name": "25_butter_cream_dataset",
+        "filename": "25_butter_cream_dataset",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 78897,
+        "required_goals": 4
+      },
+      {
+        "task_id": 26,
+        "name": "task26",
+        "filename": "task26",
+        "metadata_episode_count": 100,
+        "metadata_frame_count": 76794,
+        "required_goals": 4
+      }
+    ],
+    "split_policy": "RoboMemArena pilot: last downloaded seed of each task is validation."
+  },
+  "execution": {
+    "prediction_horizon": 20,
+    "executed_steps": 20,
+    "memory_update_interval": 20,
+    "training_query_indices": "range(0, episode_length, 1)",
+    "annotation_stride": 1,
+    "previous_memory_alignment": "target[t-20] for t>=20, otherwise generic initial memory; never target[t-1]",
+    "history_observations": "Every recorded observation from max(0,t-20) through t, inclusive; no future observations or predicted actions.",
+    "time_alignment": "Stored obs[t] and metadata[t] precede actions[t]. Actions supervised at t are actions[t:min(t+20,N)].",
+    "tail_policy": "Pad action targets only for tensor shape and mask absent timesteps in the loss; do not duplicate terminal actions or cross episode boundaries.",
+    "boundary_provenance": "Every recorded frame is a training candidate. Overlapping future20 targets are intentional; deployment executes20 and updates memory every20."
+  },
+  "visual": {
+    "canonical_renderer_source": "C:/Users/lenovo/output/liberomem_entities/entity_paths_model_renderer.js",
+    "renderer_asset": "assets/entity_paths_model_renderer.js",
+    "size": [
+      224,
+      224
+    ],
+    "overlay_style": "rgb-soft",
+    "entity_labels": "off",
+    "background_blur_px": 0.55,
+    "path_width_px": 2.2,
+    "path_casing_px": 3.6,
+    "path_opacity": 1,
+    "image_augmentation": "none; do not color-jitter, rotate, crop, or flip semantically annotated images",
+    "stored_image_orientation": "Use refined HDF5 images as stored. For live simulation reproduce the official recorder's net vertical flip, not ordinary LIBERO's 180-degree conversion.",
+    "entity_selection": "Show the task's bowls with stable colors, including current/reference points when stationary; initial points are not evidence of executed motion.",
+    "identity": "Build and validate the complete episode name/segmentation-ID registry. Use the canonical renderer's numeric-ID ordering and palette; never reassign colors from current positions.",
+    "trajectory": "Measured visible-mask centres in source-image coordinates. Split at missing/unreliable observations; no interpolation through gaps, future fitting, independent zoom or path displacement. Fine-tune images: tracks from the RGB tracker on replayed frames.",
+    "dense_rendering_selection": "Every dense observation participates in joint time-linear simplification with maximum 1.5 source-pixel error. Draw only actual measured vertices; retain all visibility transitions and explicit gaps. Render indices refer to the selected-frame list, while source frame indices remain unchanged.",
+    "robot_image_slot": "Replace base_0_rgb with the enhanced image; retain the genuine wrist observation; keep absent right_wrist_0_rgb masked."
+  },
+  "memory": {
+    "target_format": "Action:{action line}\nSubgoal:{init [...] | done k[,l] | none}\nTask:{Incomplete|Complete}",
+    "label_version": "A-v3",
+    "action_example": "blue bowl: up -> backward ; placed | orange bowl: still",
+    "action_scope": "One clause per bowl, named by trajectory colour plus the instruction's noun. Directions are in the robot base frame; picked/placed come from simulator contact and support during replay (training labels only). No progress, counts or subgoal content.",
+    "subgoal_scope": "Incremental ledger edit applied by the Ledger Driver. Items use descriptions visible at decision time: T8 '<colour> bowl -> empty plate', T6 'blue bowl -> same plate'. No simulator ids, directions or events.",
+    "task_rule": "Complete iff every item is ticked AND the recorded gripper is open AND every goal bowl rests static on its final plate. Otherwise Incomplete. No counts.",
+    "tick_timing": "An item is ticked at max(official confirmation, physical placed), at most 8 frames after the official confirmation and never before it.",
+    "previous_memory": "Action line of frame t-20 plus the rendered ledger at t-20; for t<20: Action:none, Subgoal:Not initialized., Task:Incomplete.",
+    "action_label_reliable": "Per-row flag: replay matches the recording over the window (bowl centre error <= 20 px, eef error <= 2 cm) and no failed grasp in the replay has occurred. When false, the Action-line text loss is masked; Subgoal and Task losses stay.",
+    "inference_memory": "Use model-generated memory applied through the Ledger Driver. No oracle goal count or ground-truth memory may be fed back during evaluation.",
+    "variant": "Action layer is Physical Words text plus one latent vector per bowl; z* comes from an encoder trained with SupCon on verb sequences; L_align and verb classification on z_sem both apply.",
+    "minimum_visible_pixels_for_motion_label": 20
+  },
+  "dataset": {
+    "root": "dataset",
+    "index": "train.jsonl",
+    "row_fields": [
+      "sample_id",
+      "task_id",
+      "episode_id",
+      "observation_index",
+      "history_start",
+      "history_end",
+      "instruction",
+      "previous_memory_text",
+      "memory_target_text",
+      "memory_target",
+      "image_path",
+      "wrist_image_path",
+      "episode_npz",
+      "action_start",
+      "valid_action_steps",
+      "action_label_reliable"
+    ],
+    "path_policy": "Paths in train.jsonl are relative to dataset root.",
+    "episode_arrays": {
+      "states": "float32[N,8]: ee_pos3 + existing axis-angle ee_ori3 + gripper_states2",
+      "actions": "float32[N,7], existing delta controls; no second delta conversion",
+      "centres": "float32[N,K,2] source-image centres with explicit validity",
+      "visibility": "bool[N,K]"
+    },
+    "memory_target_fields": [
+      "action_text",
+      "subgoal_delta",
+      "task_text",
+      "confirmed_goals",
+      "total_goals",
+      "action_reliable"
+    ],
+    "normalization": "Compute state/action mean, std, q01, q99, min and max from all valid dense training rows only. Use q01/q99 bounds unless equal, then use that dimension's training min/max; retain epsilon=1e-6 and never clip. Save one norm_stats.json for identical training/inference transforms.",
+    "coverage": "Retain every released episode and every source action via the 20-step targets, including final partial chunks. No silent episode filtering, no-op removal or drop_last.",
+    "latents_dir": "/pfs/pfs-7jnepv/lgd/pi05-abc/rma/full_latents/C"
+  },
+  "model": {
+    "openpi_root": "/pfs/pfs-7jnepv/lgd/pi05-abc/openpi",
+    "base_checkpoint": "/pfs/pfs-7jnepv/lgd/pi05-abc/weights/pi05_base/params",
+    "tokenizer": "/pfs/pfs-7jnepv/lgd/pi05-abc/weights/paligemma_tokenizer.model",
+    "python": "/pfs/pfs-7jnepv/lgd/SANE/.venv/bin/python",
+    "pi05": true,
+    "action_horizon": 20,
+    "action_dim": 32,
+    "physical_action_dim": 7,
+    "discrete_state_input": true,
+    "paligemma_variant": "gemma_2b",
+    "action_expert_variant": "gemma_300m",
+    "trainable_parameters": "Every nnx.Param leaf: vision, language model, action expert, embedding, projections and time MLPs. No LoRA factors or frozen parameter leaves; float32 master weights.",
+    "initialization": "Strictly restore every original base parameter into float32 master weights; only the new latent projection heads are randomly initialized.",
+    "language_head": "Existing tied embedding decoder with newly implemented supervised CE; do not claim an existing official pi05 language-training API.",
+    "token_capacity": "Measure full-corpus condition and target lengths independently, round each capacity up to a multiple of 32, never truncate, and reuse the saved capacities at inference.",
+    "conditioning": "Original instruction, actual normalized state, augmented current main image, genuine wrist image, and previous three-level memory.",
+    "teacher_isolation": "Neither observation-prefix queries nor action queries may attend to current teacher-forcing text. Action RoPE positions depend only on valid condition tokens and action positions, never target length.",
+    "memory_variant": "C"
+  },
+  "training": {
+    "optimizer_steps": 16000,
+    "checkpoint_interval": 4000,
+    "num_devices": 8,
+    "global_batch_size": 128,
+    "per_device_batch_size": 16,
+    "gradient_accumulation": 1,
+    "learning_rate": 2.5e-05,
+    "warmup_optimizer_steps": 100,
+    "final_learning_rate": 2.5e-06,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "text_loss_weight": 0.1,
+    "seed": 42,
+    "ema": false,
+    "flow_loss": "Optimize mean squared flow error over physical action dimensions 0:7 and valid future timesteps only. Retain native32 output; flow32 is detached diagnostic only. Total loss = flow7 + text_loss_weight*text_ce + align_loss_weight*align + verb_loss_weight*verb.",
+    "action_loss_metric": "flow7",
+    "coverage": "Shuffle training episodes' decision samples deterministically; visit every row before starting next epoch, mask final global-batch padding without dropping or duplicating real samples. Run exactly10000 optimizer updates.",
+    "checkpoints": "Retain all five milestone checkpoints at updates2000,4000,6000,8000,10000 with full parameters, optimizer, RNG, sampler and train-only normalization. Do not prune milestones.",
+    "validation_interval": 4000,
+    "validation": "At each milestone evaluate all held-out expert-observation samples on two distinct selected GPUs, one per teacher_history and generated_history mode, concurrently; complete and merge both reports before accepting the checkpoint. Use fixed action sampling seeds; report physical7 action errors and free-generated text metrics with explicit invalid/missing denominators.",
+    "validation_text_decoder": "Keep original full-forward Gemma logits and greedy/EOS/memory-capacity rules, but run the token loop on-device and transfer only chosen IDs/finite flags once. On the real English checkpoint, all output fields matched the original for 42 T6/T8 rows per history mode; the numerically divergent KV-cache candidate is not used.",
+    "wandb": {
+      "enabled": false,
+      "entity": "YOUR_WANDB_ENTITY",
+      "project": "pi05-memory-training-review",
+      "name": "pi05-ledger-C-rmaf",
+      "mode": "online"
+    },
+    "align_loss_weight": 0.1,
+    "verb_loss_weight": 0.1
+  },
+  "interfaces": {
+    "renderer": "render_adapter.CanonicalRenderer(renderer_js): render(rgb, frame, history_start, registry, tracks) returns (png_bytes, diagnostics); close() releases its browser. Inputs are already-stored-orientation RGB and causal dense track points.",
+    "policy": "policy.JointMemoryPolicy(checkpoint_dir): infer(main_rgb, wrist_rgb, state, instruction, previous_memory_text) returns actions[20,7], memory_text and parsed memory validity/completion. No simulator oracle fields.",
+    "policy_process": "policy.py --serve-json CHECKPOINT supports JSON-lines requests/responses with base64 PNGs, state8, instruction and previous_memory_text, so simulation can use a separate Python environment.",
+    "integration_owner": "Parent session owns shared contract, canonical renderer adapter, deployment and execution; implementation tasks own explicitly assigned files and skip build/lint/tests/formatters until integration."
+  },
+  "verification": {
+    "required": [
+      "Full HDF5/metadata episode and frame reconciliation",
+      "All sample images rendered from causal dense histories",
+      "Correct tail action masks",
+      "Strict goal-label identity and ordinal parsing",
+      "No teacher text or target-length leakage into action outputs",
+      "Finite real-weight forward/backward with every parameter in the optimizer",
+      "Nonzero updates in vision, VLM, action and other projection parameters",
+      "Full training sample coverage",
+      "Strict full-parameter checkpoint reload",
+      "Real action and three-level text inference",
+      "Available LIBERO-Mem closed-loop smoke using generated memory, not oracle feedback"
+    ],
+    "evaluation_scope": "Separate training loss, offline probes and closed-loop outcomes. Use official Raw held-out initial states when available; otherwise label training-initial-state diagnostics explicitly. Never call refined last-20 episodes an unseen split."
+  }
+}

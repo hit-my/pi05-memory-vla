@@ -1,0 +1,10 @@
+{
+ "raw": {"cfg": {"mode": "raw"}},
+ "col45": {"cfg": {"mode": "raw", "raw_colour_tol": 45.0}},
+ "rf100": {"cfg": {"mode": "raw", "raw_rob_frac": 1.0}},
+ "rf90": {"cfg": {"mode": "raw", "raw_rob_frac": 0.9}},
+ "rf70": {"cfg": {"mode": "raw", "raw_rob_frac": 0.7}},
+ "rf50": {"cfg": {"mode": "raw", "raw_rob_frac": 0.5}},
+ "rf90col45": {"cfg": {"mode": "raw", "raw_rob_frac": 0.9, "raw_colour_tol": 45.0}},
+ "rf70col45": {"cfg": {"mode": "raw", "raw_rob_frac": 0.7, "raw_colour_tol": 45.0}}
+}

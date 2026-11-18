@@ -1,0 +1,16 @@
+{
+ "base": {"cfg": {}},
+ "hp": {"cfg": {"hold_rest": "pre"}},
+ "nd": {"cfg": {"dup_frac": 0.0}},
+ "nd_hp": {"cfg": {"dup_frac": 0.0, "hold_rest": "pre"}},
+ "nd_np_hp": {"cfg": {"dup_frac": 0.0, "push": false, "hold_rest": "pre"}},
+ "hp+A": {"cfg": {"hold_rest": "pre"}, "retire": {"drawer": "close_end", "microwave": "place_open", "basket": "place_end"}, "tasks": [1,2,3,11,12,13,14,17,20,21,23,24]},
+ "nd_hp+A": {"cfg": {"dup_frac": 0.0, "hold_rest": "pre"}, "retire": {"drawer": "close_end", "microwave": "place_open", "basket": "place_end"}, "tasks": [1,2,3,11,12,13,14,17,20,21,23,24]},
+ "nd_hp+B": {"cfg": {"dup_frac": 0.0, "hold_rest": "pre"}, "retire": {"drawer": "close_move20"}, "tasks": [11,12,13,14,17]},
+ "hp+A_s20": {"cfg": {"hold_rest": "pre", "retire_soft_tol": 20.0}, "retire": {"drawer": "close_end"}, "tasks": [11,12,13,14,17]},
+ "hp+A_s30": {"cfg": {"hold_rest": "pre", "retire_soft_tol": 30.0}, "retire": {"drawer": "close_end"}, "tasks": [11,12,13,14,17]},
+ "nd_hp+A_s30": {"cfg": {"dup_frac": 0.0, "hold_rest": "pre", "retire_soft_tol": 30.0}, "retire": {"drawer": "close_end"}, "tasks": [11,12,13,14,17]},
+ "nd_hp+B_s30": {"cfg": {"dup_frac": 0.0, "hold_rest": "pre", "retire_soft_tol": 30.0}, "retire": {"drawer": "close_move20"}, "tasks": [11,12,13,14,17]},
+ "22": {"cfg": {"dup_frac": 0.0, "hold_rel": true, "hold_pt": "e"}, "retire": {"microwave": "close_end"}, "tasks": [22]},
+ "22hp": {"cfg": {"dup_frac": 0.0, "hold_rel": true, "hold_pt": "e", "hold_rest": "pre"}, "retire": {"microwave": "close_end"}, "tasks": [22]}
+}
