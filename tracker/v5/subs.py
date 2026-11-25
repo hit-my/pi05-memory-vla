@@ -4,7 +4,7 @@ import ev5
 for t in range(1, 27):
     seqs = collections.Counter()
     for ep in ev5.task_eps(t)[:100:7]:
-        m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+        m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
         sub = m["subtask"]
         text = {int(s): str(x) for s, x in zip(m["subtask_order"], m["subtask_texts"])}
         starts = [0] + [i for i in range(1, len(sub)) if sub[i] != sub[i - 1]]

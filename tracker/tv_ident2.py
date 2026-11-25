@@ -22,7 +22,7 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "code"))
 sys.path.insert(0, str(HERE / "src/sam3-f1647e8d0c1d280991f4d1b7d974c2704537fe66"))
 sys.path.append(str(HERE / "pydeps"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 import cv2  # noqa: E402
 import rma_spec  # noqa: E402
 import torch  # noqa: E402

@@ -10,7 +10,7 @@ Per object: position p and whether it is held.
             (an object keeps the fingers apart; a handle or an empty grasp does not), until the gripper opens:
             p = gripper pixel + the offset at the grasp.
 Visible = held, or mask evidence at p, or (tracker elsewhere) the colour at p still matches the object.
-Validated on the 2600 demonstrations against the subtask annotation: see /data/lgd/rma/trackv/tv_all.py.
+Validated on the 2600 demonstrations against the subtask annotation: see xxxx/rma/trackv/tv_all.py.
 """
 import cv2
 import numpy as np

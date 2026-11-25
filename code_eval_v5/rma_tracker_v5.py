@@ -1,4 +1,4 @@
-"""Online tracker server for RoboMemArena, v5 (evaluation side of the v5 tracks in /data/lgd/rma/trackv/all/final_v5).
+"""Online tracker server for RoboMemArena, v5 (evaluation side of the v5 tracks in xxxx/rma/trackv/all/final_v5).
 
 Reproduces, one frame at a time, the MASKS of the offline v5 tracking (the rule layer OnlineVetoV5 runs in the caller,
 rma_perception_v5.py, as for v2):
@@ -9,7 +9,7 @@ rma_perception_v5.py, as for v2):
                      the in-memory detections instead of initB/det/<ep>.npz) -> all/final_fix via v4/tv_full_fix.py.
                      Every object has its own SAM3 state, so tracking all objects from the B2 masks equals the offline
                      "re-track the changed objects, copy the unchanged ones" of tv_full_fix.py.
-  tasks 18, 19       /data/lgd/rma/trackv/v5/track5b.py track_episode with CHECKS=split (= track5.py + split check), run
+  tasks 18, 19       xxxx/rma/trackv/v5/track5b.py track_episode with CHECKS=split (= track5.py + split check), run
                      causally: nothing before T0 (2 / 10), selection by appearance at T0, second look at frame 6 (task 18),
                      late acquisition / re-acquisition every 10 frames, identity check at the first grasp ("pick up the
                      <object>" item + gripper closed and moved), split check while carried, Stream5.add for every restart.
@@ -42,7 +42,7 @@ CODE = Path(__file__).resolve().parent
 sys.path.insert(0, str(CODE))
 import rma_tracker_v2 as v2  # noqa: E402  (method B, SAM3 detector, legacy fallback; puts the SAM3 tree on sys.path)
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 sys.path.insert(1, str(TV / "v5"))
 import track5  # noqa: E402  (Stream5, candidates, probs, select_first, T0, RECHECK, constants)
 import track5b  # noqa: E402  (split_part, mask_far, crop_at, overlap, gripper_candidate, C_RUN, CHECKS)
@@ -343,7 +343,7 @@ def main():
     out = os.fdopen(os.dup(1), "wb")
     os.dup2(2, 1)
     sys.stdout = sys.stderr
-    root = sys.argv[sys.argv.index("--root") + 1] if "--root" in sys.argv else "/data/lgd/pi05-abc/tracker/assets"
+    root = sys.argv[sys.argv.index("--root") + 1] if "--root" in sys.argv else "xxxx/pi05-abc/tracker/assets"
     legacy = sys.argv[sys.argv.index("--legacy") + 1] if "--legacy" in sys.argv else "lazy"
     import torch
     # >= 2 CPU threads: with ONE torch thread the SAM3 stream's masks differ from the offline runs (measured on

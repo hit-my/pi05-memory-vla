@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 C = json.load(open(TV / "v5/constants_v5.json"))
 D = C["common"]
 TRIG = {"place_end": "checklist ticks 'place <obj> into the <container>'", "place_open": "gripper command opens while the current checklist item is 'place <obj> into the <container>'",

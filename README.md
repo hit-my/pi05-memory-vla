@@ -61,7 +61,7 @@ C_v3 计划训到 5 万步，3 万步以后的结果还没有出。测评规则�
 | Playwright + Chromium | 画轨迹图 | `PLAYWRIGHT_BROWSERS_PATH` |
 | RoboMemArena 基准和它的 runner | 仅仿真测评 | https://github.com/OpenHelix-Team/RoboMemArena |
 
-代码里的绝对路径（`/data/lgd/...`、`/pfs/pfs-7jnepv/lgd/...`、`/cpfs01/...`）是我们集群上的位置，换环境时用对应的环境变量或直接改。
+代码里的绝对路径（`xxxx/...`、`xxxx/...`、`xxxx/...`）是我们集群上的位置，换环境时用对应的环境变量或直接改。
 
 ## 训练
 

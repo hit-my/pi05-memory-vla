@@ -9,11 +9,11 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path("/data/lgd/rma/trackv")
+ROOT = Path("xxxx/rma/trackv")
 SRC = ROOT / "src"
 sys.path.insert(0, str(SRC / "sam3-f1647e8d0c1d280991f4d1b7d974c2704537fe66"))
 sys.path.append(str(ROOT / "pydeps"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 import torch  # noqa: E402
 
 NUM_FRAMES = 100000  # an upper bound; the stream has no known length

@@ -12,7 +12,7 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 from tv_common import ROOT, centres_from_masks, eef_pixels, episodes, load, load_masks, project  # noqa: E402
 
 import os

@@ -6,10 +6,10 @@ from pathlib import Path
 
 import numpy as np
 
-TV = Path("/data/lgd/rma/trackv")
-GT = Path("/data/lgd/rma/gt")
+TV = Path("xxxx/rma/trackv")
+GT = Path("xxxx/rma/gt")
 sys.path.insert(0, str(TV)); sys.path.insert(0, str(TV / "v4")); sys.path.insert(0, str(TV / "code")); sys.path.insert(0, str(TV / "v5"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 _QA = None
 
 

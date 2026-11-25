@@ -20,7 +20,7 @@ from pathlib import Path
 
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE / "code")); sys.path.insert(0, str(HERE / "v5"))
 import rma_spec  # noqa: E402
 from rma_sam3_stream import NUM_FRAMES, Sam3Stream  # noqa: E402
@@ -117,7 +117,7 @@ if __name__ == "__main__":
         first = np.stack([cand[sel[k]] if sel[k] >= 0 else np.zeros((256, 256), bool) for k in range(K)])
         info = dict(t0=t0, p_first=[float(P[sel[k], k]) if sel[k] >= 0 else None for k in range(K)], acquired=[t0 if sel[k] >= 0 else None for k in range(K)],
                     p_late=[None] * K, n_cand=int(len(cand)), detections=1)
-        meta = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+        meta = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
         sub_text = {int(s): str(x).lower() for s, x in zip(meta["subtask_order"], meta["subtask_texts"])}
         sub = meta["subtask"]
         closed = np.r_[False, actions[:-1, 6] > 0]

@@ -17,7 +17,7 @@ for ep in sys.argv[3:]:
     J = json.load(open(ev5.TV / f"v5/ff_clf_{task}_{TAG}.json"))
     clf = ff_lib.Softmax.from_json(J["clf"]); names = J["names"]; K = len(names)
     g = np.load(ev5.GT / f"{ep}.npz")
-    rgbs = np.load(f"/data/lgd/rma/lr_eps/front/{ep}.npy", mmap_mode="r")
+    rgbs = np.load(f"xxxx/rma/lr_eps/front/{ep}.npy", mmap_mode="r")
     rgb = np.ascontiguousarray(rgbs[FR])
     cand, sc = ff_lib.candidates(ep, DET5, only_extra=(POOL == "Z"))
     X = np.array([ff_lib.feat(rgb, m) for m in cand])

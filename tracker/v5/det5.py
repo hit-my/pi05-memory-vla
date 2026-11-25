@@ -8,18 +8,18 @@ from pathlib import Path
 
 import numpy as np
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(TV))
 sys.path.insert(0, str(TV / "src/sam3-f1647e8d0c1d280991f4d1b7d974c2704537fe66"))
 sys.path.append(str(TV / "pydeps"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 import torch  # noqa: E402
 import torch.nn.functional as F  # noqa: E402
 from PIL import Image  # noqa: E402
 from sam3.model.sam3_image_processor import Sam3Processor  # noqa: E402
 from sam3.model_builder import build_sam3_image_model  # noqa: E402
 
-LR = Path("/data/lgd/rma/lr_eps")
+LR = Path("xxxx/rma/lr_eps")
 CROP = {18: (56, 66, 152, 162), 19: (56, 66, 152, 162)}  # x0, y0, x1, y1 (96 px square)
 PROMPTS = ["box", "bottle", "carton", "small object", "food package", "chocolate box", "butter", "milk carton", "juice carton", "ketchup bottle", "chocolate bar", "brown box", "dark box"]
 THR = 0.15

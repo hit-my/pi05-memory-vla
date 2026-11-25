@@ -1,5 +1,5 @@
 from pathlib import Path
-d = Path("/data/lgd/rma/trackv")
+d = Path("xxxx/rma/trackv")
 s = (d / "tv_full.py").read_text()
 a = s.index('    if (ROOT / "out/cutie" / f"{ep}.npz").exists():')
 b = s.index("    masks = np.zeros((n, k, 256, 256), bool)")
@@ -12,7 +12,7 @@ s = s.replace("first-frame masks as today (clicks -> SAM2.1 -> CUTIE frame 0)", 
 (d / "tv_full_b.py").write_text(s)
 (d / "run_full_b.sh").write_text('''#!/bin/bash
 # run_full_b.sh : final tracker on all 2600 demos (method-B first frame -> SAM3 frame by frame -> seen-only + gripper veto)
-cd /data/lgd/rma/trackv; T=/data/lgd/pi05-abc/tracker; mkdir -p logs all/final
+cd xxxx/rma/trackv; T=xxxx/pi05-abc/tracker; mkdir -p logs all/final
 export PYTHONPATH=$T/gpu_extra:$T/assets/deps PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1
 N=24; s=0
 for g in 4 5 6 7 4 5 6 7 4 5 6 7 4 5 6 7 0 1 2 3 0 1 2 3; do

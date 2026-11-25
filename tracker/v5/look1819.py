@@ -10,7 +10,7 @@ for task in (18, 19):
     tiles = []
     for ep in ev5.task_eps(task, "A")[:12]:
         g = np.load(ev5.GT / f"{ep}.npz")
-        rgb = np.load(f"/data/lgd/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[0]
+        rgb = np.load(f"xxxx/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[0]
         names = [str(x) for x in g["all_names"]]
         kidx = g["kidx"].tolist()
         ab = g["all_bbox"][10]

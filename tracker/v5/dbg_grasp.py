@@ -5,7 +5,7 @@ from pathlib import Path
 
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE / "code")); sys.path.insert(0, str(HERE / "v5"))
 import rma_spec  # noqa
 from tv_common import load, task_of  # noqa
@@ -19,7 +19,7 @@ task = task_of(ep)
 rgb, states, actions = load(ep)
 e = eef_pixels(ep, states)
 closed = np.r_[False, actions[:-1, 6] > 0]
-meta = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+meta = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
 text = {int(s): str(x).lower() for s, x in zip(meta["subtask_order"], meta["subtask_texts"])}
 K = len(rma_spec.TASKS[task]["objects"])
 J = json.load(open(HERE / f"v5/ff_clf_{task}_d.json"))

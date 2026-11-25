@@ -7,7 +7,7 @@ for f in os.listdir(src):
         p = os.path.join(dst, f)
         if not os.path.lexists(p): os.symlink(os.path.join(src, f), p)
 m = json.load(open(os.path.join(src, "metadata.json")))
-m["openpi_root"] = "/pfs/pfs-7jnepv/lgd/pi05-abc/openpi"
+m["openpi_root"] = "xxxx/pi05-abc/openpi"
 m["lgd_eval_view"] = {"source": src, "changed": ["openpi_root"]}
 b = json.dumps(m, indent=2, ensure_ascii=False).encode()
 open(os.path.join(dst, "metadata.json"), "wb").write(b)

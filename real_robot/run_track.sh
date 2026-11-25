@@ -5,7 +5,7 @@ set -u
 SRC=${1:?lerobot dir}; RAW=${2:?raw out}; GPUS=(${3:?gpus})
 HERE=$(cd "$(dirname "$0")" && pwd)
 PY=${PY:-$HOME/SANE/.venv/bin/python}                       # any python with pandas + pyarrow
-T=${TRACKER_HOME:-/data/lgd/pi05-abc/tracker}               # tracker venv (torch + SAM3 deps)
+T=${TRACKER_HOME:-xxxx/pi05-abc/tracker}               # tracker venv (torch + SAM3 deps)
 mkdir -p "$RAW/logs"
 PYTHONDONTWRITEBYTECODE=1 $PY "$HERE/real_extract.py" "$SRC" "$RAW" || exit 1
 N=$($PY -c "import json;print(json.load(open('$SRC/meta/info.json'))['total_episodes'])")

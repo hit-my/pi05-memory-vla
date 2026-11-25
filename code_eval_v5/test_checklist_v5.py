@@ -20,7 +20,7 @@ from causal_labels import ledger_at, prefix_at, task_prior  # noqa: E402
 from ledger_v2 import render_ledger  # noqa: E402
 from rma_checklist_v5 import ChecklistSignalV5, LabelSignal, current_item  # noqa: E402
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 per_task = int(sys.argv[1]) if len(sys.argv) > 1 else 3
 by = {}
 for p in sorted((TV / "v5/feat5").glob("t*_seed*.npz")):
@@ -33,7 +33,7 @@ for task, names in sorted(by.items()):
 
 
 def episode(ep):
-    m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+    m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
     sub = m["subtask"]
     text = {int(s): str(x) for s, x in zip(m["subtask_order"], m["subtask_texts"])}
     starts = [0] + [t for t in range(1, len(sub)) if sub[t] != sub[t - 1]]
@@ -45,7 +45,7 @@ def episode(ep):
 priors = {}
 for task in sorted({int(e[1:3]) for e in eps}):
     lists = []
-    for p in sorted((Path("/data/lgd/rma/lr_eps/meta")).glob(f"t{task:02d}_seed*.npz")):
+    for p in sorted((Path("xxxx/rma/lr_eps/meta")).glob(f"t{task:02d}_seed*.npz")):
         _, _, _, items, _ = episode(p.stem)
         lists.append(items)
     priors[task] = task_prior(lists)

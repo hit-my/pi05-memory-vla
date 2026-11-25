@@ -1,7 +1,7 @@
 #!/bin/bash
 # on 9031: stage the checked v2r dataset as one tar on /pfs for the other nodes' watchers (readable by every uid)
 set -e
-D=/data/lgd/rma/dataset_v2r; S=$HOME/pi05-abc/rma/stage
+D=xxxx/rma/dataset_v2r; S=$HOME/pi05-abc/rma/stage
 [ -f $D/dataset/CHECK_OK ]
 test ! -e $S/dataset_v2r.tar
 echo "STAGE2 tar start $(date)"

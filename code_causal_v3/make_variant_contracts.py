@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 here = Path(__file__).parent
-ROOT = "/pfs/pfs-7jnepv/lgd/pi05-abc"
+ROOT = "xxxx/pi05-abc"
 VARIANTS = {"A5": ("A", None), "C5": ("C", None), "P": ("C", f"{ROOT}/latents_P"), "Q": ("B", f"{ROOT}/latents_P")}
 for name, (base, latents) in VARIANTS.items():
     contract = json.loads((here / f"contract_{base}_fail.json").read_text(encoding="utf-8"))

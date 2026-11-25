@@ -1,6 +1,6 @@
 """Online tracker server for RoboMemArena, v2: SAM3 "method B" first-frame init + SAM3 frame-by-frame tracking.
 
-Reproduces, one frame at a time, what the offline pipeline /data/lgd/rma/trackv/tv_full_b.py does up to the masks:
+Reproduces, one frame at a time, what the offline pipeline xxxx/rma/trackv/tv_full_b.py does up to the masks:
   frame 0 : SAM3 image detector with generic prompts (initB/initB_det.py) -> candidates 20..700 px, de-duplicated,
             assigned to the task's fixed clicks with linear_sum_assignment, R = 30 px (initB/initB_eval.py, method_b)
             -> objects without a detection fall back to the legacy click mask (rma_tracker.NamedTracker.initialize_named,
@@ -33,9 +33,9 @@ import numpy as np
 
 CODE = Path(__file__).resolve().parent
 sys.path.insert(0, str(CODE))
-import rma_spec  # noqa: E402  (code_causal_v2/rma_spec.py; identical to /data/lgd/rma/trackv/code/rma_spec.py)
+import rma_spec  # noqa: E402  (code_causal_v2/rma_spec.py; identical to xxxx/rma/trackv/code/rma_spec.py)
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 sys.path.insert(1, str(TV))
 from rma_sam3_stream import Sam3Stream  # noqa: E402  (puts the SAM3 source tree and its deps on sys.path)
 import torch  # noqa: E402
@@ -183,7 +183,7 @@ def main():
     out = os.fdopen(os.dup(1), "wb")
     os.dup2(2, 1)
     sys.stdout = sys.stderr
-    root = sys.argv[sys.argv.index("--root") + 1] if "--root" in sys.argv else "/data/lgd/pi05-abc/tracker/assets"
+    root = sys.argv[sys.argv.index("--root") + 1] if "--root" in sys.argv else "xxxx/pi05-abc/tracker/assets"
     legacy = sys.argv[sys.argv.index("--legacy") + 1] if "--legacy" in sys.argv else "lazy"
     torch.set_num_threads(int(os.environ.get("TRACKER_THREADS", "2")))
     tracker = TrackerV2(root, legacy)

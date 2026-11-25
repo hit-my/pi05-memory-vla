@@ -1,10 +1,10 @@
 #!/bin/bash
-# Runs on 9031 and on 9022 (both hold /data/lgd/rma/dataset_v2r/dataset with CHECK_OK). Every 5 min: sample all GPUs
+# Runs on 9031 and on 9022 (both hold xxxx/rma/dataset_v2r/dataset with CHECK_OK). Every 5 min: sample all GPUs
 # 10 times over ~1 min; a GPU counts as free when it is healthy, has >= 60000 MiB free and its max sampled utilization
 # is <= 15 %. When 4 GPUs are free on 3 consecutive rounds (~15 min), take the shared claim (mkdir on /pfs, so only one
 # node launches) and run train_C_v2r.sh on them. If the training dies before its first checkpoint within 1 h, release
 # the claim and keep watching (max 3 attempts). User-approved 11-14.
-D=/data/lgd/rma/dataset_v2r/dataset; L=/data/lgd/rma/logs; B=$HOME/pi05-abc/build_v2r
+D=xxxx/rma/dataset_v2r/dataset; L=xxxx/rma/logs; B=$HOME/pi05-abc/build_v2r
 CLAIM=$HOME/pi05-abc/rma/stage/C_v2r.claim; H=$(hostname)
 log(){ echo "$(date '+%m-%d %H:%M:%S') $*"; }
 [ -f $D/CHECK_OK ] || { log "no CHECK_OK dataset on $H"; exit 2; }
@@ -35,7 +35,7 @@ while true; do
     log "LAUNCH attempt $attempts on $H GPUs $free"
     bash $B/train_C_v2r.sh $free
     log "train_C_v2r.sh returned after $(( ($(date +%s)-t0)/60 )) min"
-    if ! ls -d /data/lgd/rma/C_v2r/checkpoint_* >/dev/null 2>&1 && [ $(( $(date +%s)-t0 )) -lt 3600 ] && [ $attempts -lt 3 ]; then
+    if ! ls -d xxxx/rma/C_v2r/checkpoint_* >/dev/null 2>&1 && [ $(( $(date +%s)-t0 )) -lt 3600 ] && [ $attempts -lt 3 ]; then
       log "died early without checkpoint, release claim and keep watching"; tail -3 $L/C_v2r.log; rm -rf $CLAIM; streak=0; continue
     fi
     log "done (claim kept)"; exit 0

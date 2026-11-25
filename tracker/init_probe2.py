@@ -6,7 +6,7 @@ from PIL import Image
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path.home() / "pi05-abc/code_causal_b"))
 from policy import JointMemoryPolicy
-DS = Path("/data/lgd/rma/full/dataset_causal")
+DS = Path("xxxx/rma/full/dataset_causal")
 policy = JointMemoryPolicy(sys.argv[1])
 req = json.load(open(sys.argv[2]))
 png = lambda b: np.asarray(Image.open(io.BytesIO(base64.b64decode(b))).convert("RGB"))

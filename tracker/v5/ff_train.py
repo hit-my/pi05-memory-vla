@@ -24,7 +24,7 @@ BETA = float(sys.argv[7]) if len(sys.argv) > 7 else 0.0
 def rows(ep, d, fr):
     g = np.load(ev5.GT / f"{ep}.npz")
     q = ev5.qa().get(ep, {})
-    rgb = np.ascontiguousarray(np.load(f"/data/lgd/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[fr])
+    rgb = np.ascontiguousarray(np.load(f"xxxx/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[fr])
     cand, sc = ff_lib.candidates(ep, d, only_extra=True)
     K = len(g["objects"])
     bb = g["bbox"][max(fr, 2)]

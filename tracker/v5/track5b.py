@@ -26,7 +26,7 @@ from pathlib import Path
 
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE / "code")); sys.path.insert(0, str(HERE / "v5"))
 import rma_spec  # noqa: E402
 from tv_common import centres_from_masks, load, task_of  # noqa: E402
@@ -107,7 +107,7 @@ def overlap(m, mk, frac):
 def episode_inputs(ep):
     task = task_of(ep)
     rgb, states, actions = load(ep)
-    meta = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+    meta = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
     sub_text = {int(s): str(x).lower() for s, x in zip(meta["subtask_order"], meta["subtask_texts"])}
     picks = [None] * len(rgb)   # object named by the checklist item "pick up the <object>" at each frame
     for t in range(len(rgb)):

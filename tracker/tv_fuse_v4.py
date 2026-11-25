@@ -412,7 +412,7 @@ def retirement_plan(task_id, texts):
                   door edge / the gripper.
     """
     import sys
-    sys.path.insert(0, "/data/lgd/rma/trackv/code")
+    sys.path.insert(0, "xxxx/rma/trackv/code")
     import rma_spec
     plan = []
     for i, text in enumerate(texts):
@@ -442,10 +442,10 @@ def retired_from_labels(ep, n=None, mode="closed"):
         Reason: while the drawer is pushed shut the object moves without being grasped and then disappears; the rules
         cannot know that and may keep a dot at the old place until the closing subtask ends."""
     import sys
-    sys.path.insert(0, "/data/lgd/rma/trackv/code")
+    sys.path.insert(0, "xxxx/rma/trackv/code")
     import rma_spec
     task = task_of(ep)
-    m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+    m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
     sub = m["subtask"] if n is None else m["subtask"][:n]
     text = {int(s): str(x) for s, x in zip(m["subtask_order"], m["subtask_texts"])}
     starts = [0] + [t for t in range(1, len(sub)) if sub[t] != sub[t - 1]]

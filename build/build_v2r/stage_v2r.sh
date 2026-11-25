@@ -2,7 +2,7 @@
 # on 9031: wait until the v2r dataset build passed its check (CHECK_OK), then stage it as one tar on the shared /pfs
 # home for the training node (9022). Writes stage/dataset_v2r.tar and then stage/dataset_v2r.tar.done.
 set -e
-D=/data/lgd/rma/dataset_v2r; S=$HOME/pi05-abc/rma/stage; L=/data/lgd/rma/logs
+D=xxxx/rma/dataset_v2r; S=$HOME/pi05-abc/rma/stage; L=xxxx/rma/logs
 mkdir -p $S $L
 echo "STAGE wait $(date)"
 until [ -f $D/dataset/CHECK_OK ]; do

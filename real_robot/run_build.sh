@@ -13,11 +13,11 @@
 set -u
 RAW=${1:?}; D=${2:?}; CODE=${3:?}; CIN=${4:?}; WORKERS=${5:-8}
 HERE=$(cd "$(dirname "$0")" && pwd)
-SIM=${LIBERO_SIMULATOR_DRIVER_ROOT:-/data/lgd/mirror/old}        # data_common.py, render_adapter.py
+SIM=${LIBERO_SIMULATOR_DRIVER_ROOT:-xxxx/mirror/old}        # data_common.py, render_adapter.py
 SIMPY=${SIMPY:-$SIM/sim-venv/bin/python}                          # python with playwright
 PY=${PY:-$HOME/SANE/.venv/bin/python}                             # the training python (openpi, jax, torch)
-export LIBERO_SIMULATOR_DRIVER_ROOT=$SIM PLAYWRIGHT_BROWSERS_PATH=${PLAYWRIGHT_BROWSERS_PATH:-/data/lgd/mirror/pw/playwright_browsers}
-[ -d /data/lgd/mirror/syslib ] && export LD_LIBRARY_PATH=/data/lgd/mirror/syslib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export LIBERO_SIMULATOR_DRIVER_ROOT=$SIM PLAYWRIGHT_BROWSERS_PATH=${PLAYWRIGHT_BROWSERS_PATH:-xxxx/mirror/pw/playwright_browsers}
+[ -d xxxx/mirror/syslib ] && export LD_LIBRARY_PATH=xxxx/mirror/syslib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
 export PYTHONDONTWRITEBYTECODE=1
 L=$D/logs; mkdir -p "$L"
 say(){ echo "$(date '+%m-%d %H:%M:%S') $*"; }

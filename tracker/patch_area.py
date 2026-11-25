@@ -1,6 +1,6 @@
 import shutil
 from pathlib import Path
-f = Path("/data/lgd/rma/trackv/tv_fuse.py")
+f = Path("xxxx/rma/trackv/tv_fuse.py")
 if not f.with_suffix(".py.bak_area").exists():
     shutil.copy(f, f.with_suffix(".py.bak_area"))
 s = f.read_text()

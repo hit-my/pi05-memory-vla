@@ -1,6 +1,6 @@
 """Trajectory overlay from STORED object tracks (v2r) -- the one place that turns a track file into renderer input.
 
-Track file (one npz per episode, e.g. /path/to/<ep>.npz):
+Track file (one npz per episode, e.g. xxxx/<ep>.npz):
     centres    float32 [N,K,2]  256-px source-image coordinates (x, y); nan = not drawn at this frame
     visibility bool    [N,K]
     retired    bool    [N,K]    sticky; a retired object is never drawn again

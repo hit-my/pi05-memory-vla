@@ -3,7 +3,7 @@
 set -eu
 B=$HOME/pi05-abc/build_v3; C2=$HOME/pi05-abc/code_causal_v2; C3=$HOME/pi05-abc/code_causal_v3
 PY=$HOME/SANE/.venv/bin/python
-D2=/data/lgd/rma/dataset_v2r/dataset; D3=/data/lgd/rma/dataset_v3/dataset
+D2=xxxx/rma/dataset_v2r/dataset; D3=xxxx/rma/dataset_v3/dataset
 log(){ echo "$(date '+%m-%d %H:%M:%S') $*"; }
 if [ ! -d $C3 ]; then
   cp -a $C2 $C3; rm -rf $C3/__pycache__

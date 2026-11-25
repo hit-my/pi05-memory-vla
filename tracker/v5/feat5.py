@@ -6,9 +6,9 @@ from pathlib import Path
 
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE / "v5"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 from tv_common_v4 import eef_pixels, load  # noqa: E402
 import tv_fuse_v5  # noqa: E402
 

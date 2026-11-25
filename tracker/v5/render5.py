@@ -33,14 +33,14 @@ def pick_frames(flags, n, count=10):
 
 def strip(ep, k, CA, VA, CB, VB, out, frames=None, title="", g=None, e=None, count=10, flags=None, extra_pts=None):
     g = g or ev5.G(ep)
-    rgb = np.load(f"/data/lgd/rma/lr_eps/front/{ep}.npy", mmap_mode="r")
+    rgb = np.load(f"xxxx/rma/lr_eps/front/{ep}.npy", mmap_mode="r")
     n = min(len(rgb), g.n, len(CA))
     if flags is None:
         flags = ev5.score(g, CA, VA, per_frame=True)["flags"][:, k]
     frames = frames or pick_frames(flags[:n], n, count)
     if e is None:
         from tv_common_v4 import eef_pixels
-        m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+        m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
         e = eef_pixels(ep, m["states"])
     tiles = []
     for t in frames:

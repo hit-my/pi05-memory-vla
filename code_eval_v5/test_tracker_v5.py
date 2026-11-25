@@ -23,7 +23,7 @@ import track5  # noqa: E402
 import track5b  # noqa: E402
 from tv_common import load  # noqa: E402
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 out = Path(sys.argv[1]); out.mkdir(parents=True, exist_ok=True)
 
 
@@ -41,12 +41,12 @@ def cmp(a, b):
     return dict(frames_differ=int(f.sum()), first=int(np.argmax(f)) if f.any() else None, pixels=int(d.sum()))
 
 
-tr = tv5.TrackerV5("/data/lgd/pi05-abc/tracker/assets")
+tr = tv5.TrackerV5("xxxx/pi05-abc/tracker/assets")
 for ep in sys.argv[2:]:
     task = int(ep[1:3])
     rgb, states, actions = load(ep)
     n = len(rgb)
-    m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+    m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
     st_raw = m["states"][:n]
     sub_text = {int(s): str(x).lower() for s, x in zip(m["subtask_order"], m["subtask_texts"])}
     picks = [None] * n

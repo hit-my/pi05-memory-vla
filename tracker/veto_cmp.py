@@ -8,10 +8,10 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "code"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 import imageio_ffmpeg  # noqa: E402
 from tv_common import eef_pixels, load  # noqa: E402
 

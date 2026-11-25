@@ -10,10 +10,10 @@ import cv2
 import numpy as np
 
 os.environ["TV_EPS"] = "eps104.json"
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "code"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 import imageio_ffmpeg  # noqa: E402
 import tv_fuse  # noqa: E402
 from tv_common import ROOT, centres_from_masks, eef_pixels, episodes, load, load_masks  # noqa: E402

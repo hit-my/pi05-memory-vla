@@ -22,8 +22,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from target_encoder import Encoder, PIXEL_SCALE, WINDOW  # noqa: E402
 
 HOME = Path.home()
-CL = Path("/data/lgd/pi05-abc/closedloop")
-INJ = Path("/data/lgd/pi05-abc/inject/full")
+CL = Path("xxxx/pi05-abc/closedloop")
+INJ = Path("xxxx/pi05-abc/inject/full")
 LEDGER_A = HOME / "pi05-ledger-A"
 index = json.loads((LEDGER_A / "inputs/index.json").read_text())["episodes"]
 meta = {}
@@ -167,6 +167,6 @@ for name in "BC":
     z = np.asarray(encoder(jnp.asarray(x)))
     scaled = (z / (np.linalg.norm(z, axis=1, keepdims=True) + 1e-8) * 8.0 - np.asarray(stats["mean"])) / np.asarray(stats["std"])
     out[f"z{name}"] = scaled / (np.linalg.norm(scaled, axis=1, keepdims=True) + 1e-8) * 8.0
-np.savez_compressed(Path("/data/lgd/pi05-abc/probe.npz"), **out)
+np.savez_compressed(Path("xxxx/pi05-abc/probe.npz"), **out)
 kinds, counts = np.unique(out["kinds"], return_counts=True)
 print("PROBE_SAVED", dict(zip(kinds.tolist(), counts.tolist())), flush=True)

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "code"))
 from tv_common import LR, eef_pixels, load  # noqa: E402

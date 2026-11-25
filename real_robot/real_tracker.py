@@ -5,7 +5,7 @@ Server:   real_tracker.py --serve      binary protocol on stdin/stdout, so the S
             -> b"RESET\n" + 256*256*3 bytes      <- one JSON line {"centres": [[x,y]|null,...], "area": [...], "report": {...}}
             -> b"STEP\n"  + 256*256*3 bytes      <- one JSON line {"centres": ..., "area": ...}
           The first line the server prints is READY.
-Needs: SAM3 source tree + sam3.pt (TRACKER_SAM3_ROOT, default /data/lgd/rma/trackv: src/sam3-<rev>/, src/sam3.pt,
+Needs: SAM3 source tree + sam3.pt (TRACKER_SAM3_ROOT, default xxxx/rma/trackv: src/sam3-<rev>/, src/sam3.pt,
 rma_sam3_stream.py), torch with CUDA.
 
 Why this is more than "SAM3 video tracking": the two bowls look the same. A bowl disappears under the gripper while
@@ -29,7 +29,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import real_spec as S  # noqa: E402
 
-TV = Path(os.environ.get("TRACKER_SAM3_ROOT", "/data/lgd/rma/trackv"))
+TV = Path(os.environ.get("TRACKER_SAM3_ROOT", "xxxx/rma/trackv"))
 LOST_AFTER = 5        # frames without the bowl before re-detection starts
 REDETECT_EVERY = 5    # frames between re-detections while lost
 REACQUIRE_AREA = 400  # a re-acquired bowl must be mostly visible (a free bowl is 600..1700 px, larger near the camera)

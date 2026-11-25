@@ -5,7 +5,7 @@ set -u
 SRC=${1:?hdf5 dir}; RAW=${2:?raw out}; GPUS=(${3:?gpus})
 HERE=$(cd "$(dirname "$0")" && pwd)
 PY=${PY:-python}                       # any python with h5py + Pillow
-T=${TRACKER_HOME:-/path/to/tracker}               # tracker venv (torch + SAM3 deps + h5py)
+T=${TRACKER_HOME:-xxxx/tracker}               # tracker venv (torch + SAM3 deps + h5py)
 mkdir -p "$RAW/logs"
 [ -f "$RAW/extract.json" ] || PYTHONDONTWRITEBYTECODE=1 $PY "$HERE/real_extract.py" "$SRC" "$RAW" > "$RAW/logs/extract.log" || exit 1
 N=$(ls "$SRC"/episode_init_*.hdf5 | wc -l); K=${#GPUS[@]}; per=$(( (N + K - 1) / K ))

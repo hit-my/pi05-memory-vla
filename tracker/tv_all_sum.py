@@ -1,6 +1,6 @@
 import glob, json, collections
 rows = []
-for f in glob.glob("/data/lgd/rma/trackv/all/part_*.json"):
+for f in glob.glob("xxxx/rma/trackv/all/part_*.json"):
     rows += json.load(open(f))
 T = collections.defaultdict(list)
 for r in rows:

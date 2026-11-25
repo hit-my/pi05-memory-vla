@@ -23,7 +23,7 @@ def inside(p, b, pad=2.0):
 def one(ep):
     g = np.load(ev5.GT / f"{ep}.npz")
     q = ev5.qa().get(ep, {})
-    rgb = np.load(f"/data/lgd/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[0]
+    rgb = np.load(f"xxxx/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[0]
     cand, sc = ff_lib.candidates(ep, EXTRA)
     K = len(g["objects"])
     kidx = g["kidx"].tolist()

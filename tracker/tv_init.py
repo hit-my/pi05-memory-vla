@@ -16,8 +16,8 @@ from tracker_core import Options  # noqa: E402
 from tv_common import LR, ROOT  # noqa: E402
 
 per_task = int(sys.argv[1])
-clicks = json.load(open("/pfs/pfs-7jnepv/lgd/pi05-abc/rma/clicks26.json"))["episodes"]
-tracker = NamedTracker("/data/lgd/pi05-abc/tracker/assets", Options(selection="detector", max_mem_frames=10))
+clicks = json.load(open("xxxx/pi05-abc/rma/clicks26.json"))["episodes"]
+tracker = NamedTracker("xxxx/pi05-abc/tracker/assets", Options(selection="detector", max_mem_frames=10))
 rows = []
 by_task = {}
 for ep in sorted(clicks):

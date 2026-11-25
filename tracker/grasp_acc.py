@@ -7,12 +7,12 @@ from pathlib import Path
 
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "code"))
 import rma_spec  # noqa: E402
 
-LR = Path("/data/lgd/rma/lr_eps")
+LR = Path("xxxx/rma/lr_eps")
 per = defaultdict(Counter)
 bad = []
 for f in sorted((HERE / "all/final").glob("t*_seed*.npz")):

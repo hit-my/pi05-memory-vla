@@ -6,7 +6,7 @@ from pathlib import Path
 
 import tv_fuse_v5
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(TV / "code"))
 import rma_spec  # noqa: E402
 
@@ -28,7 +28,7 @@ for t in (18, 19):
         import det5_const
         j = json.load(open(p))
         ff[str(t)] = dict(
-            reference_implementation="/data/lgd/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
+            reference_implementation="xxxx/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
             t0=det5_const.T0[t], second_look_frame=det5_const.RECHECK.get(t), crop_xyxy=list(det5_const.CROP[t]), crop_zoom_to=1008,
             prompts=det5_const.PROMPTS, detector_threshold=det5_const.THR, area_range=[20, 700], nms_iou=0.7,
             selection=dict(p_min=0.5, pair_distance_max_px=j["dmax"], pair_penalty_per_px=0.25, usual_area_px=j["atyp"], area_exponent=j["beta"], no_overlap=0.3,

@@ -6,10 +6,10 @@ from pathlib import Path
 import numpy as np
 
 sys.dont_write_bytecode = True
-ROOT = Path("/data/lgd/rma/trackv")
-LR = Path("/data/lgd/rma/lr_eps")
-DS = Path("/data/lgd/rma/full/dataset_causal/episodes")
-CAM = json.load(open("/pfs/pfs-7jnepv/lgd/pi05-abc/rma/camera26.json"))
+ROOT = Path("xxxx/rma/trackv")
+LR = Path("xxxx/rma/lr_eps")
+DS = Path("xxxx/rma/full/dataset_causal/episodes")
+CAM = json.load(open("xxxx/pi05-abc/rma/camera26.json"))
 WORST = [17, 11, 14, 12, 13, 9, 8, 18, 25, 26, 23, 3, 19, 1]
 FIRST = [17, 11, 8, 25, 19, 1]
 MIN_PIXELS = 20
@@ -20,7 +20,7 @@ def episodes():
     f = ROOT / os.environ.get("TV_EPS", "eps.json")
     if f.exists():
         return json.loads(f.read_text())
-    strict = json.load(open("/data/lgd/rma/trackq/strict.json"))
+    strict = json.load(open("xxxx/rma/trackq/strict.json"))
     eps = []
     for task in WORST:
         paths = sorted(DS.glob(f"t{task:02d}_seed*.npz"))

@@ -12,7 +12,7 @@ Compared per frame:
   centres   vs final_v5 centres (nan-equal; max |diff| px), visibility, retired
   overlay   renderer PNG bytes vs the training overlay = overlay_v2r.OverlayState on final_v5 rendered by the same
             CanonicalRenderer (the code path of rma_build_v2r.py); where the running build already finished the episode
-            (/data/lgd/rma/dataset_v2r/dataset/rows_base/<ep>.jsonl) also vs its stored PNG
+            (xxxx/rma/dataset_v2r/dataset/rows_base/<ep>.jsonl) also vs its stored PNG
 Writes OUT/<ep>.json and prints one line per episode.
 """
 import sys
@@ -33,9 +33,9 @@ import rma_perception_v5 as pv5  # noqa: E402
 import rma_spec  # noqa: E402
 from rma_perception import make_tracks  # noqa: E402
 
-TV = Path("/data/lgd/rma/trackv")
-LR = Path("/data/lgd/rma/lr_eps")
-BUILD = Path(os.environ.get("BUILD_DATASET", "/data/lgd/rma/dataset_v2r/dataset"))
+TV = Path("xxxx/rma/trackv")
+LR = Path("xxxx/rma/lr_eps")
+BUILD = Path(os.environ.get("BUILD_DATASET", "xxxx/rma/dataset_v2r/dataset"))
 out_dir, shard, shards, per_task, mode = Path(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), sys.argv[5]
 given = sys.argv[6:]
 out_dir.mkdir(parents=True, exist_ok=True)

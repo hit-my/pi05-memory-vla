@@ -15,7 +15,7 @@ torch.set_num_threads(2)
 ep = sys.argv[1]
 task = int(ep[1:3])
 rgb, states, actions = load(ep)
-tr = tv5.TrackerV5("/data/lgd/pi05-abc/tracker/assets")
+tr = tv5.TrackerV5("xxxx/pi05-abc/tracker/assets")
 start = time.time()
 tr.reset(np.ascontiguousarray(rgb[0]), task, states[0])
 last = time.time()

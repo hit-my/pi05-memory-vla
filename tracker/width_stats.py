@@ -2,7 +2,7 @@
 import glob, re, numpy as np
 obj, other = {4: [], 8: [], 12: []}, {4: [], 8: [], 12: []}
 dur_obj, dur_other = [], []
-for f in sorted(glob.glob("/data/lgd/rma/lr_eps/meta/t*_seed*.npz")):
+for f in sorted(glob.glob("xxxx/rma/lr_eps/meta/t*_seed*.npz")):
     m = np.load(f); s, a, sub = m["states"], m["actions"], m["subtask"]
     text = {int(k): str(v) for k, v in zip(m["subtask_order"], m["subtask_texts"])}
     closed = a[:, 6] > 0

@@ -33,7 +33,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import real_spec as S  # noqa: E402
 
-TV = Path(os.environ.get("TRACKER_SAM3_ROOT", "/path/to/trackv"))
+TV = Path(os.environ.get("TRACKER_SAM3_ROOT", "xxxx/trackv"))
 LIFT_PIXELS = {"cup": 20.0, "block": 10.0}   # gripper closed: an object whose mask centre is this far from where it stands
                                              # is being carried (a block is about 26 px across, a cup about 40)
 LEFT_INSIDE = {"cup": 0.3, "block": 0.6}     # ... and at most this share of its mask still lies on the place where it stood (it has left it;

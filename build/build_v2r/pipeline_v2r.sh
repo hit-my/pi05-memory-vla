@@ -6,19 +6,19 @@
 #   OUT_ROOT/logs               build_<shard>.log, assemble.log, latents.log, check.log, check_report.json
 #   OUT_ROOT/dataset/CHECK_OK   written only when the final integrity check passed
 # env: WORKERS (default 8, hard cap 8), EPISODES_FILE (subset; implies a partial build), PARTIAL=1,
-#      PREV (previous dataset for the diff, default /data/lgd/rma/full/dataset_causal), CODE, RAW,
+#      PREV (previous dataset for the diff, default xxxx/rma/full/dataset_causal), CODE, RAW,
 #      LATENTS_GPU (GPU index for the small target encoder; default: CPU), IMAGE_SAMPLES, SKIP_LOADER=1
 # Resumable: run the same command again; finished episodes are skipped, later stages are redone (they are cheap).
 set -u
 TRACKS=${1:?tracks dir}; ROOT=${2:?output root}
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-RAW=${RAW:-/data/lgd/rma/lr_eps}
+RAW=${RAW:-xxxx/rma/lr_eps}
 CODE=${CODE:-$HOME/pi05-abc/code_causal_v2}
-PREV=${PREV:-/data/lgd/rma/full/dataset_causal}
+PREV=${PREV:-xxxx/rma/full/dataset_causal}
 WORKERS=${WORKERS:-8}; [ "$WORKERS" -gt 8 ] && WORKERS=8
 PARTIAL=${PARTIAL:-0}; [ -n "${EPISODES_FILE:-}" ] && PARTIAL=1
 D=$ROOT/dataset; L=$ROOT/logs
-SIM=/data/lgd/mirror/old
+SIM=xxxx/mirror/old
 SIMPY=$SIM/sim-venv/bin/python
 PY=$HOME/SANE/.venv/bin/python
 export PYTHONDONTWRITEBYTECODE=1
@@ -56,8 +56,8 @@ if missing or bad:
 EOF
 
 # ---- 1. row writer + images, WORKERS shards (simulator venv: headless Chromium renderer; no GPU)
-export LIBERO_SIMULATOR_DRIVER_ROOT=$SIM PLAYWRIGHT_BROWSERS_PATH=/data/lgd/mirror/pw/playwright_browsers
-[ -d /data/lgd/mirror/syslib ] && export LD_LIBRARY_PATH=/data/lgd/mirror/syslib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export LIBERO_SIMULATOR_DRIVER_ROOT=$SIM PLAYWRIGHT_BROWSERS_PATH=xxxx/mirror/pw/playwright_browsers
+[ -d xxxx/mirror/syslib ] && export LD_LIBRARY_PATH=xxxx/mirror/syslib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
 pids=()
 for i in $(seq 0 $((WORKERS - 1))); do
   OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 $SIMPY -u "$HERE/rma_build_v2r.py" --raw "$RAW" --tracks "$TRACKS" --out "$D" \

@@ -1,6 +1,6 @@
 """Integrity check of a v2r dataset, and field-by-field diff against the previous dataset.
 
-  rma_check_v2r.py --dataset D --raw LR_EPS --tracks TRACKS --contract FILE [--prev /data/lgd/rma/full/dataset_causal]
+  rma_check_v2r.py --dataset D --raw LR_EPS --tracks TRACKS --contract FILE [--prev xxxx/rma/full/dataset_causal]
                    [--partial] [--image-samples 400] [--report FILE.json] [--skip-loader]
 Exit status 0 only when every check passes. Checks:
   A  coverage: built episodes vs RAW (all, unless --partial), frames per episode vs the LeRobot arrays, manifest and

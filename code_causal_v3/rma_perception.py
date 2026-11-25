@@ -23,14 +23,14 @@ CODE = Path(__file__).resolve().parent
 sys.path.insert(0, str(CODE))
 import rma_spec  # noqa: E402
 
-DRIVER = Path(os.environ.get("LIBERO_SIMULATOR_DRIVER_ROOT", "/cpfs01/USER/pi05-full-t06-t08"))
+DRIVER = Path(os.environ.get("LIBERO_SIMULATOR_DRIVER_ROOT", "xxxx/pi05-full-t06-t08"))
 sys.path.insert(0, str(DRIVER))
 from data_common import make_tracks, measure_entities  # noqa: E402
 from render_adapter import CanonicalRenderer  # noqa: E402
 
 SIZE = 256
 CADENCE = 20
-T = Path("/data/lgd/pi05-abc/tracker")
+T = Path("xxxx/pi05-abc/tracker")
 
 
 class TrackerProcess:

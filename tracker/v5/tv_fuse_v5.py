@@ -47,8 +47,8 @@ import sys
 
 import numpy as np
 
-if "/data/lgd/rma/trackv" not in sys.path:
-    sys.path.append("/data/lgd/rma/trackv")
+if "xxxx/rma/trackv" not in sys.path:
+    sys.path.append("xxxx/rma/trackv")
 from tv_fuse_v4 import _dist, cap_dist, capsule, frame_features  # noqa: F401  (capsule is used by the callers)
 
 CONFIG5 = dict(
@@ -382,7 +382,7 @@ def load_masks(ep):
     """the stored masks of an episode [N,K,256,256] (v5/track > all/final_fix > all/final)"""
     from pathlib import Path
     for d in ("v5/track_split", "v5/track", "all/final_fix", "all/final"):
-        p = Path("/data/lgd/rma/trackv") / d / f"{ep}.npz"
+        p = Path("xxxx/rma/trackv") / d / f"{ep}.npz"
         if p.exists():
             return np.unpackbits(np.load(p)["masks"], axis=-1)[..., :256].astype(bool)
     raise FileNotFoundError(ep)
@@ -422,7 +422,7 @@ def retirement_plan_v5(task_id, texts, spec):
                       moveNN = the gripper closed inside it and then moved >= NN px in the image (the drawer is being pushed);
                       end = it ends (checklist tick).
     Returns list of (subtask index, when, object index)."""
-    sys.path.insert(0, "/data/lgd/rma/trackv/code")
+    sys.path.insert(0, "xxxx/rma/trackv/code")
     import rma_spec
     plan = []
     for i, text in enumerate(texts):
@@ -449,10 +449,10 @@ def retirement_plan_v5(task_id, texts, spec):
 def retired_from_labels_v5(ep, n, spec):
     """bool [N,K], True from the frame the object is retired. Offline stand-in for the policy's checklist (reads the demo's
     subtask labels, the gripper commands and - for close_moveNN - the gripper pixel). Causal twin: rma_online_veto_v5.RetireSignalV5."""
-    sys.path.insert(0, "/data/lgd/rma/trackv/code")
+    sys.path.insert(0, "xxxx/rma/trackv/code")
     import rma_spec
     task = int(ep[1:3])
-    m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+    m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
     sub = m["subtask"][:n]
     text = {int(s): str(x) for s, x in zip(m["subtask_order"], m["subtask_texts"])}
     starts = [0] + [t for t in range(1, len(sub)) if sub[t] != sub[t - 1]]

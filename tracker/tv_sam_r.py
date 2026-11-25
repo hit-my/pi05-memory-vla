@@ -15,7 +15,7 @@ sys.path.insert(0, str(HERE))
 from tv_common import ROOT, episodes, load, load_masks, save_masks  # noqa: E402
 
 method, shard, shards = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
-GEN = Path("/data/lgd/pi05-abc/tracker/gen")
+GEN = Path("xxxx/pi05-abc/tracker/gen")
 WEIGHTS = str(GEN / "weights/sam2.1_hiera_base_plus.pt")
 SRC = ROOT / "src"
 sys.modules.setdefault("loguru", types.SimpleNamespace(logger=logging.getLogger("x")))

@@ -370,10 +370,10 @@ def retired_from_labels(ep, n=None):
     """bool [N,K]: object j is retired from the first frame after the end of a subtask that handles j and places it into
     a closed container. Offline stand-in for the policy's checklist tick; reads the demo's subtask labels."""
     import sys
-    sys.path.insert(0, "/data/lgd/rma/trackv/code")
+    sys.path.insert(0, "xxxx/rma/trackv/code")
     import rma_spec
     task = task_of(ep)
-    m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+    m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
     sub = m["subtask"] if n is None else m["subtask"][:n]
     text = {int(s): str(x) for s, x in zip(m["subtask_order"], m["subtask_texts"])}
     out = np.zeros((len(sub), len(rma_spec.TASKS[task]["objects"])), bool)

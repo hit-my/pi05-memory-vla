@@ -6,8 +6,8 @@
 #   lenient memory (wrong-length checklist / unparsable memory never ends the episode).
 #   Example (NOT started by its author):
 #     nohup bash ~/pi05-abc/code_eval_v5/eval_v5_full.sh ~/pi05-abc-ckpt/C_v2r/checkpoint_050000 C_v2r_050000 0,1,2,3 10 \
-#        > /data/lgd/rma/eval/C_v2r_050000_v5.log 2>&1 &
-#   Output: /data/lgd/rma/eval/<GROUP>_v5_<host>/<GROUP>/t<task>_s<seed>/{aggregate.json,episodes.tsv,adapter_log/,videos/}
+#        > xxxx/rma/eval/C_v2r_050000_v5.log 2>&1 &
+#   Output: xxxx/rma/eval/<GROUP>_v5_<host>/<GROUP>/t<task>_s<seed>/{aggregate.json,episodes.tsv,adapter_log/,videos/}
 #           and DONE when every job finished; summary: python3 ~/pi05-abc/rma_summary.py <that dir> (as for earlier runs).
 #   Restartable: finished jobs are skipped.
 set -u
@@ -16,7 +16,7 @@ CODE_DIR=${5:-$HOME/pi05-abc/code_causal_v2}
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 [ -f "$CKPT/COMPLETE.json" ] || { echo "no COMPLETE.json in $CKPT"; exit 2; }
 H=$(hostname | sed 's/.*-//')
-O=/data/lgd/rma/eval/${GROUP}_v5_$H
+O=xxxx/rma/eval/${GROUP}_v5_$H
 mkdir -p $O
 echo "EVAL_V5_START $GROUP $CKPT gpus $GPUS max_running $MAXR code $CODE_DIR $(date)"
 $HOME/SANE/.venv/bin/python -u $HERE/rma_queue_v5.py $O "$GROUP=$CKPT" --tasks $(seq -s, 1 26) --trials 10 --block 5 --seed 50 \

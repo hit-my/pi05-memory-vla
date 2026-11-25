@@ -46,7 +46,7 @@ def gt_label(c, a, bb, ar):
 def one(ep):
     g = np.load(ev5.GT / f"{ep}.npz")
     q = ev5.qa().get(ep, {})
-    rgbs = np.load(f"/data/lgd/rma/lr_eps/front/{ep}.npy", mmap_mode="r")
+    rgbs = np.load(f"xxxx/rma/lr_eps/front/{ep}.npy", mmap_mode="r")
     cand, sc = cands(ep)
     K = len(g["objects"])
     bb, ar = g["bbox"][10], g["mask_area"][10]

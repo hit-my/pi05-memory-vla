@@ -8,7 +8,7 @@ import json
 import sys
 from pathlib import Path
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 out = {}
 for ep in sys.argv[1:]:
     if (TV / "v5/track_split" / f"{ep}.npz").exists() or (TV / "v5/track" / f"{ep}.npz").exists():

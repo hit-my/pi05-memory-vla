@@ -3,7 +3,7 @@
 # absolute), verify the index sha256 against split_manifest.json, delete the staging tar, then start the 50k-step
 # scheme-C training on 4 GPUs as soon as 4 GPUs have enough free memory (idle GPUs preferred). Approved by the user.
 set -e
-S=$HOME/pi05-abc/rma/stage; L=/data/lgd/rma/logs; D=/data/lgd/rma/dataset_v2r
+S=$HOME/pi05-abc/rma/stage; L=xxxx/rma/logs; D=xxxx/rma/dataset_v2r
 mkdir -p $L
 log(){ echo "$(date '+%m-%d %H:%M:%S') $*"; }
 log "wait for stage"

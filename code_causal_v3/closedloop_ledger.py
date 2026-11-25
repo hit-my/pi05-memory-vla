@@ -78,7 +78,7 @@ def install(simulate):
 
 
 if __name__ == "__main__":
-    root = Path(os.environ.get("LIBERO_SIMULATOR_DRIVER_ROOT", "/cpfs01/USER/pi05-full-t06-t08"))
+    root = Path(os.environ.get("LIBERO_SIMULATOR_DRIVER_ROOT", "xxxx/pi05-full-t06-t08"))
     sys.path.insert(0, str(root))
     import simulate as simulate_module
 

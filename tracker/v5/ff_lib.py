@@ -4,7 +4,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 YS, XS = np.mgrid[0:256, 0:256]
 LO, HI = 20, 700
 

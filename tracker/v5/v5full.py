@@ -11,7 +11,7 @@ from pathlib import Path
 
 import numpy as np
 
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE / "v5"))
 import tv_fuse_v5  # noqa: E402
 

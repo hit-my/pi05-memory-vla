@@ -1,10 +1,10 @@
-"""Step-wise ("online") tracking rules v5 = /data/lgd/rma/trackv/v5/tv_fuse_v5.py, one frame at a time.
+"""Step-wise ("online") tracking rules v5 = xxxx/rma/trackv/v5/tv_fuse_v5.py, one frame at a time.
 
 The rules live in ONE place, the state machine tv_fuse_v5.VetoV5 (per-task rule set: mode raw / v5 / v4 with the constants of
-rma_veto_v5_constants.json next to this file = a copy of /data/lgd/rma/trackv/v5/constants_v5.json). The offline functions
+rma_veto_v5_constants.json next to this file = a copy of xxxx/rma/trackv/v5/constants_v5.json). The offline functions
 (observe_only_v5 on masks, observe_from_features on cached measurements) and this class feed it frame by frame with the same
 per-frame measurements (tv_fuse_v5.frame_features5) and the corrected gripper projection (tv_common_v4).
-Equality with the offline functions on stored masks: /data/lgd/rma/trackv/v5/test_veto_v5.py.
+Equality with the offline functions on stored masks: xxxx/rma/trackv/v5/test_veto_v5.py.
 
 Same interface as rma_online_veto_v4.OnlineVetoV4:
     veto = OnlineVetoV5(task_id)
@@ -26,7 +26,7 @@ offline the same comes from tv_fuse_v5.retired_from_labels_v5 (test: equal on th
 
 What the evaluation-time tracker must do besides calling this class (see constants "first_frame" / "first_frame_appearance"):
     tasks 1-17, 20-26: unchanged first frame (method B; B2 for tasks 25/26), SAM3 stream tracker, masks -> this class.
-    tasks 18, 19 (first frame by appearance; reference implementation /data/lgd/rma/trackv/v5/track5.py, constants under
+    tasks 18, 19 (first frame by appearance; reference implementation xxxx/rma/trackv/v5/track5.py, constants under
         "first_frame_appearance"): no track before frame t0 (2 / 10: the objects are still dropping in the stored frame 0).
         At t0: zoomed SAM3 text detections on the fixed cabinet-1 crop -> appearance classifier (weights in the constants) ->
         joint choice of one detection per object (ff_lib.select_joint). Task 18: the choice is repeated at frame 6 and an
@@ -43,7 +43,7 @@ import sys
 
 import numpy as np
 
-TRACKV = "/data/lgd/rma/trackv"
+TRACKV = "xxxx/rma/trackv"
 CONSTANTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "rma_veto_v5_constants.json")
 
 

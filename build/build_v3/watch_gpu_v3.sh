@@ -5,7 +5,7 @@
 # If this node has no checked dataset yet: unpack the staged tar from /pfs, verify the index sha256, then re-check
 # that the GPUs are still free. CUDA test, then train_C_v3.sh. Early death (<1 h, no checkpoint): release, keep watching
 # (max 3 launches). 1 h after a healthy launch the staged tar is deleted.
-D=/data/lgd/rma/dataset_v3; L=/data/lgd/rma/logs; B=$HOME/pi05-abc/build_v3; S=$HOME/pi05-abc/rma/stage
+D=xxxx/rma/dataset_v3; L=xxxx/rma/logs; B=$HOME/pi05-abc/build_v3; S=$HOME/pi05-abc/rma/stage
 CLAIM=$S/C_v3.claim; H=$(hostname); PY=$HOME/SANE/.venv/bin/python
 export NCCL_NVLS_ENABLE=0
 mkdir -p $L
@@ -67,7 +67,7 @@ while true; do
     ( sleep 3600; pgrep -u $(id -u) -f "[c]ode_causal_v2/train.py" >/dev/null && rm -f $S/dataset_v3.tar $S/dataset_v3.tar.done && log "staged tar deleted" ) &
     bash $B/train_C_v3.sh $free
     log "train_C_v3.sh returned after $(( ($(date +%s)-t0)/60 )) min"
-    if ! ls -d /data/lgd/rma/C_v3/checkpoint_* >/dev/null 2>&1 && [ $(( $(date +%s)-t0 )) -lt 3600 ] && [ $attempts -lt 3 ]; then
+    if ! ls -d xxxx/rma/C_v3/checkpoint_* >/dev/null 2>&1 && [ $(( $(date +%s)-t0 )) -lt 3600 ] && [ $attempts -lt 3 ]; then
       log "died early without checkpoint, release and keep watching"; tail -3 $L/C_v3.log; release; continue
     fi
     log "done (claim kept)"; exit 0

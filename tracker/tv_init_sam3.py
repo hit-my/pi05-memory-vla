@@ -10,7 +10,7 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "code"))
 sys.path.insert(0, str(HERE / "src/sam3-f1647e8d0c1d280991f4d1b7d974c2704537fe66"))
 sys.path.append(str(HERE / "pydeps"))
-sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
 import rma_spec  # noqa: E402
 import torch  # noqa: E402
 from PIL import Image  # noqa: E402
@@ -26,7 +26,7 @@ PROMPT = {"cookies": ["cookie box", "box of cookies"], "sauce": ["ketchup bottle
           "bottle": ["wine bottle"], "milk": ["milk carton"], "juice": ["orange juice carton", "juice carton"]}
 model = build_sam3_image_model(checkpoint_path=str(HERE / "src/sam3.pt"), load_from_HF=False)
 proc = Sam3Processor(model, confidence_threshold=0.15)
-clicks = json.load(open("/pfs/pfs-7jnepv/lgd/pi05-abc/rma/clicks26.json"))["episodes"]
+clicks = json.load(open("xxxx/pi05-abc/rma/clicks26.json"))["episodes"]
 by_task = {}
 for ep in sorted(clicks):
     by_task.setdefault(int(ep[1:3]), []).append(ep)

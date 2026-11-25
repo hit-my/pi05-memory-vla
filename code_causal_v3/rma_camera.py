@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 from robosuite.utils.camera_utils import get_camera_transform_matrix
 
-sys.path.insert(0, "/data/lgd/rma/eval/RoboMemArena-main/evaluation_benchmark/scripts")
+sys.path.insert(0, "xxxx/rma/eval/RoboMemArena-main/evaluation_benchmark/scripts")
 import eval_common as ec  # noqa: E402
 
 result = {}

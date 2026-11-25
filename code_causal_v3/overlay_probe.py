@@ -28,7 +28,7 @@ group, ckpt_group, runs, task, out = sys.argv[1], sys.argv[2], sys.argv[3].split
 variants = sys.argv[6].split(",")
 max_normal = int(sys.argv[7]) if len(sys.argv) > 7 else 80
 install(simulate)
-CL = Path(os.environ.get("CL_ROOT", "/data/lgd/pi05-abc/closedloop"))
+CL = Path(os.environ.get("CL_ROOT", "xxxx/pi05-abc/closedloop"))
 HOME = Path.home()
 contract = json.loads((CODE / f"contract_{ckpt_group}.json").read_text())
 random.seed(0)

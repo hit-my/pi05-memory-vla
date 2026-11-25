@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 
 os.environ["TV_EPS"] = "eps104.json"
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "code"))
 import rma_spec  # noqa: E402

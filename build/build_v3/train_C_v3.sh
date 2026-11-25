@@ -4,21 +4,21 @@
 # dataset (written by the dataset build as <dataset>/contract_C_v2r.json; nothing else differs).
 # Modelled on rma/r93_f32.sh and rma/r88_wait_train.sh (same environment variables, same export watcher).
 #
-#   setsid nohup bash ~/pi05-abc/build_v2r/train_C_v2r.sh 0,1,2,3 > /data/lgd/rma/logs/C_v2r.launch.log 2>&1 < /dev/null &
+#   setsid nohup bash ~/pi05-abc/build_v2r/train_C_v2r.sh 0,1,2,3 > xxxx/rma/logs/C_v2r.launch.log 2>&1 < /dev/null &
 #
-# usage: train_C_v2r.sh GPUS [RUN=C_v2r] [DATASET=/data/lgd/rma/dataset_v2r/dataset]
-# Run it on the node that holds the dataset (built on 9031; /data is node-local). Output /data/lgd/rma/$RUN (node-local,
-# five ~35 GB checkpoints), log /data/lgd/rma/logs/$RUN.log, inference files of each milestone exported to
+# usage: train_C_v2r.sh GPUS [RUN=C_v2r] [DATASET=xxxx/rma/dataset_v2r/dataset]
+# Run it on the node that holds the dataset (built on 9031; /data is node-local). Output xxxx/rma/$RUN (node-local,
+# five ~35 GB checkpoints), log xxxx/rma/logs/$RUN.log, inference files of each milestone exported to
 # ~/pi05-abc-ckpt/$RUN/checkpoint_0X0000 by rma/r64_export.sh. Running the same command again resumes from the latest
 # retained checkpoint (train.py does that itself). NEVER edit ~/pi05-abc/code_causal_v2 while this runs (source hash check).
 set -u
 GPUS=${1:?usage: train_C_v2r.sh GPU,GPU,GPU,GPU [RUN] [DATASET]}
 RUN=${2:-C_v3}
-DATASET=${3:-/data/lgd/rma/dataset_v3/dataset}
+DATASET=${3:-xxxx/rma/dataset_v3/dataset}
 CODE=$HOME/pi05-abc/code_causal_v3
 CONTRACT=$DATASET/contract_C_v3.json
 NEED=${NEED:-56000}   # MiB free per GPU: 30 % of 183 GB is preallocated (measured peak ~34 GB per GPU at 4 x 32)
-L=/data/lgd/rma/logs; OUT=/data/lgd/rma/$RUN
+L=xxxx/rma/logs; OUT=xxxx/rma/$RUN
 mkdir -p $L
 
 [ "$(echo $GPUS | tr ',' '\n' | grep -c .)" -eq 4 ] || { echo "need exactly 4 GPU indices"; exit 2; }

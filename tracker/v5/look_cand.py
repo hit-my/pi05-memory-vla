@@ -9,7 +9,7 @@ import ff_lib
 Z = 5
 for ep in sys.argv[1:]:
     g = np.load(ev5.GT / f"{ep}.npz")
-    rgb = np.load(f"/data/lgd/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[0]
+    rgb = np.load(f"xxxx/rma/lr_eps/front/{ep}.npy", mmap_mode="r")[0]
     bb = g["bbox"][10]
     names = [str(x) for x in g["objects"]]
     cx, cy = np.nanmean(bb[:, [0, 2]]), np.nanmean(bb[:, [1, 3]])

@@ -15,7 +15,7 @@ sys.path.insert(0, str(HERE))
 from tv_common import ROOT, episodes, load, load_masks, save_masks  # noqa: E402
 
 method, shard, shards = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
-GEN = Path("/data/lgd/pi05-abc/tracker/gen")
+GEN = Path("xxxx/pi05-abc/tracker/gen")
 WEIGHTS = str(GEN / "weights/sam2.1_hiera_base_plus.pt")
 SRC = ROOT / "src"
 sys.modules.setdefault("loguru", types.SimpleNamespace(logger=logging.getLogger("x")))
@@ -42,7 +42,7 @@ class Video:
         if kind == "sam3":  # SAM3's own video tracker (the SAM2-style interface), same first-frame mask as the others
             sys.path.insert(0, str(SRC / "sam3-f1647e8d0c1d280991f4d1b7d974c2704537fe66"))
             sys.path.append(str(HERE / "pydeps"))
-            sys.path.append("/data/lgd/pi05-abc/tracker/assets/deps")
+            sys.path.append("xxxx/pi05-abc/tracker/assets/deps")
             from sam3.model_builder import build_sam3_video_model
             import sam3.model.sam3_tracking_predictor as module
             model = build_sam3_video_model(checkpoint_path=str(SRC / "sam3.pt"), load_from_HF=False)

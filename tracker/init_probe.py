@@ -12,7 +12,7 @@ CODE = Path.home() / "pi05-abc/code_causal_b"
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(CODE))
 from policy import JointMemoryPolicy
-DS = Path("/data/lgd/rma/full/dataset_causal")
+DS = Path("xxxx/rma/full/dataset_causal")
 PREV = "Action:none\nSubgoal:Not initialized.\nTask:Incomplete"
 ckpt, out, tasks = sys.argv[1], sys.argv[2], [int(x) for x in sys.argv[3].split(",")]
 policy = JointMemoryPolicy(ckpt)
@@ -33,7 +33,7 @@ for task in tasks:
         res.append(dict(task=task, kind="train", ep=row["episode_id"], text=r["memory_text"], valid=r["memory_valid"], label=row["memory_target"]["subgoal_delta"]))
         print(task, "train", row["episode_id"], r["memory_valid"], r["memory_text"].split("\n")[1][:90], flush=True)
     main0, wrist0, state0, row0 = first
-    for f in sorted(glob.glob(f"/data/lgd/rma/trackv/evalfirst/t{task:02d}_*_front.png"))[:4]:
+    for f in sorted(glob.glob(f"xxxx/rma/trackv/evalfirst/t{task:02d}_*_front.png"))[:4]:
         em, ew = img(f), img(f.replace("_front", "_wrist"))
         for kind, a, b in (("evalraw", em, ew), ("train_main+eval_wrist", main0, ew), ("eval_main+train_wrist", em, wrist0)):
             r = policy.infer(a, b, state0, row0["instruction"], PREV, None)

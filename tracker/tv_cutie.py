@@ -14,7 +14,7 @@ from rma_tracker import NamedTracker  # noqa: E402
 from tracker_core import Options  # noqa: E402
 
 shard, shards = int(sys.argv[1]), int(sys.argv[2])
-tracker = NamedTracker("/data/lgd/pi05-abc/tracker/assets", Options(selection="detector", max_mem_frames=10))
+tracker = NamedTracker("xxxx/pi05-abc/tracker/assets", Options(selection="detector", max_mem_frames=10))
 for i, ep in enumerate(episodes()):
     if i % shards != shard or (ROOT / "out/cutie" / f"{ep}.npz").exists():
         continue

@@ -35,7 +35,7 @@ args = [a for a in sys.argv[1:] if not a.startswith("--prev=")]
 prev = next((Path(a.split("=", 1)[1]) for a in sys.argv[1:] if a.startswith("--prev=")), None)
 dataset, tracks_dir, eps = Path(args[0]), Path(args[1]), args[2:]
 CODE = Path(os.environ.get("CODE", Path.home() / "pi05-abc/code_causal_v2")).resolve()
-RAW = Path(os.environ.get("RAW", "/data/lgd/rma/lr_eps"))
+RAW = Path(os.environ.get("RAW", "xxxx/rma/lr_eps"))
 sys.path.insert(0, str(CODE))
 import rma_spec  # noqa: E402
 import rma_perception_v2 as pv2  # noqa: E402

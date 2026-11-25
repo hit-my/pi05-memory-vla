@@ -674,7 +674,7 @@
  },
  "first_frame_appearance": {
   "18": {
-   "reference_implementation": "/data/lgd/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
+   "reference_implementation": "xxxx/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
    "t0": 2,
    "second_look_frame": 6,
    "crop_xyxy": [
@@ -933,7 +933,7 @@
    "trained_on": "selection half; zoomed detections of frames 4, 6, 10 (task 18) / 10 (task 19) labelled with the GT boxes of the same frame"
   },
   "19": {
-   "reference_implementation": "/data/lgd/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
+   "reference_implementation": "xxxx/rma/trackv/v5/track5.py (detector det5.py, features/selection ff_lib.py)",
    "t0": 10,
    "second_look_frame": null,
    "crop_xyxy": [

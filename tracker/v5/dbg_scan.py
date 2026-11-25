@@ -1,7 +1,7 @@
 import json, sys
 from pathlib import Path
 import numpy as np
-HERE = Path("/data/lgd/rma/trackv")
+HERE = Path("xxxx/rma/trackv")
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE / "code")); sys.path.insert(0, str(HERE / "v5"))
 import track5b, track5, ff_lib, det5
 from sam3.model.sam3_image_processor import Sam3Processor

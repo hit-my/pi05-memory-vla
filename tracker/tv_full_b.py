@@ -1,6 +1,6 @@
 """Re-track every demonstration with the chosen method: first-frame masks by method B (initB/<ep>.npy),
 then the SAM3 tracker frame by frame, then "seen only + gripper veto".
-Output /data/lgd/rma/trackv/all/sam3veto/<ep>.npz: centres/visibility (after veto), raw_centres/raw_visibility (SAM3 as is),
+Output xxxx/rma/trackv/all/sam3veto/<ep>.npz: centres/visibility (after veto), raw_centres/raw_visibility (SAM3 as is),
 area [N,K], events. Usage: tv_full.py SHARD NSHARDS [reverse]"""
 import json
 import sys

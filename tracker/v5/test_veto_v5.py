@@ -12,15 +12,15 @@ from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, "/data/lgd/rma/trackv")
-sys.path.insert(0, "/data/lgd/rma/trackv/v5")
-sys.path.insert(0, "/pfs/pfs-7jnepv/lgd/pi05-abc/code_causal_v2")  # the online twin is imported from here
+sys.path.insert(0, "xxxx/rma/trackv")
+sys.path.insert(0, "xxxx/rma/trackv/v5")
+sys.path.insert(0, "xxxx/pi05-abc/code_causal_v2")  # the online twin is imported from here
 from rma_online_veto_v5 import CONSTANTS, OnlineVetoV5, RetireSignalV5  # noqa: E402
 from tv_common_v4 import load, task_of  # noqa: E402
 import tv_fuse_v5  # noqa: E402
 from feat5 import src  # noqa: E402
 
-TV = Path("/data/lgd/rma/trackv")
+TV = Path("xxxx/rma/trackv")
 shard, shards, per_task = int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])
 assert filecmp.cmp(CONSTANTS, TV / "v5/constants_v5.json", shallow=False), "constants next to the online twin differ from v5/constants_v5.json"
 CONST = tv_fuse_v5.load_constants()
@@ -42,7 +42,7 @@ for i, ep in enumerate(eps):
     rgb, states, actions = load(ep)
     masks = np.unpackbits(z["masks"], axis=-1)[..., :256].astype(bool)
     n, k = masks.shape[:2]
-    m = np.load(f"/data/lgd/rma/lr_eps/meta/{ep}.npz")
+    m = np.load(f"xxxx/rma/lr_eps/meta/{ep}.npz")
     text = {int(s): str(x) for s, x in zip(m["subtask_order"], m["subtask_texts"])}
     raw_states = m["states"]
     spec = CONST["tasks"][str(task)]["retire"]

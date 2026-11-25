@@ -1,6 +1,6 @@
 """Step-wise ("online") version of tv_fuse.observe_only: "seen only + gripper veto", one frame at a time.
 
-The offline function /data/lgd/rma/trackv/tv_fuse.py::observe_only loops over whole arrays but only ever reads
+The offline function xxxx/rma/trackv/tv_fuse.py::observe_only loops over whole arrays but only ever reads
 index t and its own running state, so it is causal. OnlineVeto keeps that running state (anchors q, held object,
 pending grasp, recent centroids, first-frame area and colour, previous gripper command) and executes the SAME
 statements per frame. Everything that can be shared is imported from the offline code, not copied:
@@ -26,7 +26,7 @@ import sys
 
 import numpy as np
 
-TRACKV = "/data/lgd/rma/trackv"  # tv_common / rma_sam3_stream hard-code this root themselves
+TRACKV = "xxxx/rma/trackv"  # tv_common / rma_sam3_stream hard-code this root themselves
 
 
 def _import_offline():

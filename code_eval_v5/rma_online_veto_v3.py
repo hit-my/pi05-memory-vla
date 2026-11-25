@@ -1,10 +1,10 @@
-"""Step-wise ("online") gripper veto v3 = /data/lgd/rma/trackv/tv_fuse_v3.py::observe_only_v3, one frame at a time.
+"""Step-wise ("online") gripper veto v3 = xxxx/rma/trackv/tv_fuse_v3.py::observe_only_v3, one frame at a time.
 
 The rules live in ONE place, the state machine tv_fuse_v3.VetoV3; the offline observe_only_v3 and this class both feed
 it frame by frame (same per-frame measurements tv_fuse_v3.frame_features, same capsule, same per-task configuration
 tv_fuse_v3.TASK_CONFIG keyed by task id). What differs between the two callers is only how the inputs arrive: here a
 single float32 state and the previous gripper command per call instead of whole arrays. Equality with the offline
-function on stored masks is checked by /data/lgd/rma/trackv/v3/test_veto_v3.py.
+function on stored masks is checked by xxxx/rma/trackv/v3/test_veto_v3.py.
 
 Same interface as rma_online_veto.OnlineVeto (v2):
     veto = OnlineVetoV3(task_id)
@@ -27,7 +27,7 @@ import sys
 
 import numpy as np
 
-TRACKV = "/data/lgd/rma/trackv"
+TRACKV = "xxxx/rma/trackv"
 
 
 def _import_offline():

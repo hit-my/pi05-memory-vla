@@ -1,5 +1,5 @@
 from pathlib import Path
-f = Path("/data/lgd/rma/trackv/tv_fuse.py")
+f = Path("xxxx/rma/trackv/tv_fuse.py")
 s = f.read_text()
 old = """            if states[t, 6] < MIN_WIDTH * 0.6:
                 pending = None  # fingers fully closed: nothing between them

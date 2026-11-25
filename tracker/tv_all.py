@@ -3,7 +3,7 @@
 Reference (uses the subtask annotation, which the online tracker never sees): object k rests at its frame-0 position;
 from the gripper-close inside a subtask that names k until the next gripper-open it moves rigidly with the gripper pixel.
 Scores per method: share of its visible frames farther than 15 px from the reference; share of grasps credited to the
-right object. Usage: tv_all.py SHARD NSHARDS  ->  /data/lgd/rma/trackv/all/part_SHARD.json, tracks in all/fuse/<ep>.npz
+right object. Usage: tv_all.py SHARD NSHARDS  ->  xxxx/rma/trackv/all/part_SHARD.json, tracks in all/fuse/<ep>.npz
 """
 import json
 import os

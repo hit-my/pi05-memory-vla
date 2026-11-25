@@ -1,6 +1,6 @@
 """Re-track every demonstration with the chosen method: first-frame masks as today (clicks -> SAM2.1 -> CUTIE frame 0),
 then the SAM3 tracker frame by frame, then "seen only + gripper veto".
-Output /data/lgd/rma/trackv/all/sam3veto/<ep>.npz: centres/visibility (after veto), raw_centres/raw_visibility (SAM3 as is),
+Output xxxx/rma/trackv/all/sam3veto/<ep>.npz: centres/visibility (after veto), raw_centres/raw_visibility (SAM3 as is),
 area [N,K], events. Usage: tv_full.py SHARD NSHARDS [reverse]"""
 import json
 import sys
@@ -41,7 +41,7 @@ for ep in order:
         if named is None:
             from rma_tracker import NamedTracker
             from tracker_core import Options
-            named = NamedTracker("/data/lgd/pi05-abc/tracker/assets", Options(selection="detector", max_mem_frames=10))
+            named = NamedTracker("xxxx/pi05-abc/tracker/assets", Options(selection="detector", max_mem_frames=10))
         _, labels = named.initialize_named(rgb[0].copy(), rma_spec.detector_objects(task))
         first = np.stack([labels == j + 1 for j in range(k)])
     masks = np.zeros((n, k, 256, 256), bool)

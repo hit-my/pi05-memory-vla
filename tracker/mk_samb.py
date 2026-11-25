@@ -1,5 +1,5 @@
 from pathlib import Path
-d = Path("/data/lgd/rma/trackv")
+d = Path("xxxx/rma/trackv")
 s = (d / "tv_sam.py").read_text()
 a = 'first, _ = load_masks("cutie", ep)'
 assert s.count(a) == 1, s.count(a)
